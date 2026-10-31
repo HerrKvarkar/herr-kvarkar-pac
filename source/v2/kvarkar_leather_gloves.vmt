@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+ "$basetexture" "models/kvarkar/v2/gloves_leather_diffuse"
+ "$bumpmap" "models/kvarkar/v2/hands_glove_n"
+ "$model" "1"
+ "$phong" "1"
+ "$phongboost" "0.25"
+ "$phongexponent" "22"
+ "$phongfresnelranges" "[0.05 0.15 0.3]"
+}

@@ -12,3 +12,6 @@ This is a personal PAC assembly and adaptation. It does not claim ownership of u
 - Source/Valve human skeleton, eye shaders and player animation framework remain game dependencies.
 - Facial-control recovery used [Crowbar Command Line](https://github.com/UltraTechX/Crowbar-Command-Line), based on ZeqMacaw's Crowbar. The executable is not bundled here.
 - Custom face and red shirt diffuse masters were edited with OpenAI's built-in image generation tool; VTF encoding and model assembly used local tooling.
+- V2 field-trouser and boot source: mounted `models/player/cheddar/omega1/omega1_officer.mdl`, retargeted together to preserve their original ankle joins. Black trouser and leather glove/coat diffuse variants use the built-in image tool; source authors retain their rights.
+- V2 embossed External Affairs emblem: [user-provided DEA reference](https://postimg.cc/vcVFVVKV), incorporated as shallow geometry relief with the original leather UVs and skin weights.
+- Coat-tail procedural-bone setup was checked against [Valve's Source SDK jiggle-bone implementation](https://github.com/ValveSoftware/source-sdk-2013/blob/master/src/public/jigglebones.cpp).
