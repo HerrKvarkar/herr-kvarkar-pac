@@ -361,7 +361,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 1.7274627680308e-05,
+						["Weight"] = 3.2223825655819e-05,
 						["Flex"] = "jaw_drop",
 						["Name"] = "Voice jaw movement",
 						["UniqueID"] = "58dc591524458d9f7ddd6c574ea8640d9bbf87999cf5fce3d81ecbccea5893eb",
@@ -383,7 +383,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 8.6373138401541e-06,
+						["Weight"] = 1.611191282791e-05,
 						["Flex"] = "right_part",
 						["Name"] = "Voice lip right_part",
 						["UniqueID"] = "ae222cf69df377b8e056fa7bb8bfbc73b62297eeac1fb2c807bc4aea98def204",
@@ -405,7 +405,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 8.6373138401541e-06,
+						["Weight"] = 1.611191282791e-05,
 						["Flex"] = "left_part",
 						["Name"] = "Voice lip left_part",
 						["UniqueID"] = "9ee50d31d14e38211ec84730f7f5cea4f11f0c9c6715ecdfa7e792cba58f15f1",
@@ -437,8 +437,8 @@
 				["BoneMerge"] = true,
 				["ClassName"] = "model2",
 				["UniqueID"] = "e753b006983d5eee3c3d16944efb711b56842e6b0ffa2b17dae99d6104705019",
-				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/v2-preview/assets/herr_kvarkar_character_v2_preview_r7_compact.zip",
-				["Materials"] = "pac3_cache/1160312349/kvarkar_face;pac3_cache/1160312349/kvarkar_mouth;pac3_cache/1160312349/kvarkar_eye_l;pac3_cache/1160312349/kvarkar_eye_r;pac3_cache/1160312349/kvarkar_dea_trousers;pac3_cache/1160312349/kvarkar_dea_shirt;pac3_cache/1160312349/kvarkar_leather_gloves;pac3_cache/1160312349/kvarkar_black_tie;pac3_cache/1160312349/kvarkar_leather_coat_fine;pac3_cache/1160312349/kvarkar_dea_emboss;pac3_cache/1160312349/kvarkar_hair;pac3_cache/1160312349/kvarkar_field_boots;pac3_cache/1160312349/kvarkar_field_trousers_clean;pac3_cache/1160312349/kvarkar_field_pocket",
+				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/v2-preview/assets/herr_kvarkar_character_v2_preview_r7_waistfix.zip",
+				["Materials"] = "pac3_cache/3842371583/kvarkar_face;pac3_cache/3842371583/kvarkar_mouth;pac3_cache/3842371583/kvarkar_eye_l;pac3_cache/3842371583/kvarkar_eye_r;pac3_cache/3842371583/kvarkar_dea_trousers;pac3_cache/3842371583/kvarkar_dea_shirt;pac3_cache/3842371583/kvarkar_leather_gloves;pac3_cache/3842371583/kvarkar_black_tie;pac3_cache/3842371583/kvarkar_leather_coat_fine;pac3_cache/3842371583/kvarkar_dea_emboss;pac3_cache/3842371583/kvarkar_hair;pac3_cache/3842371583/kvarkar_field_boots;pac3_cache/3842371583/kvarkar_field_trousers_clean;pac3_cache/3842371583/kvarkar_field_pocket",
 				["Name"] = "Herr Kvarkar | V2 heavy-duty character",
 				["EyeTargetUID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
 			},
