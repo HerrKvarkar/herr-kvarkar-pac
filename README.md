@@ -4,7 +4,7 @@ PAC3 outfit for Herr Kvarkar: platinum hair, custom clean-shaven fair face with 
 
 Copy `herr_kvarkar_ea_field_agent.txt` into `garrysmod/data/pac3/`, then load **herr_kvarkar_ea_field_agent** in PAC3. The PAC downloads its custom visual content from this repository. It uses the game's existing player skeleton and PAC3 marker model.
 
-The versioned save is `herr_kvarkar_ea_field_agent_v1.txt`. The v1.0.0 GitHub release includes that PAC and a complete archive of the content and model sources.
+The versioned save is `herr_kvarkar_ea_field_agent_v1.txt`. The latest v1 GitHub release includes that PAC and a complete archive of the content and model sources.
 
 - `assets/herr_kvarkar_character_v4.zip`: complete character and textures, including the animated male07 face.
 - `assets/kvarkar_earpiece_fitted_v4.zip`: fitted accessory mesh and charcoal material.

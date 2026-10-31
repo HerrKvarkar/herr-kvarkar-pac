@@ -125,6 +125,79 @@
 				},
 				[3] = {
 					["children"] = {
+					},
+					["self"] = {
+						["UniqueID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
+						["Name"] = "Laser Target",
+						["Alpha"] = 0.5,
+						["ClassName"] = "model2",
+						["Size"] = 0.2,
+						["Brightness"] = 91.6,
+						["Bone"] = "hitpos",
+						["Model"] = "models/pac/default.mdl",
+						["Material"] = "red",
+					},
+				},
+				[4] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["UniqueID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
+								["AimPartUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
+								["Name"] = "Shoulder Target",
+								["EditorExpand"] = true,
+								["Size"] = 0,
+								["AngleOffset"] = Angle(70.900001525879, -5, -100),
+								["Position"] = Vector(-10.942000389099, 17.469329833984, -2.5390625),
+								["Bone"] = "pelvis",
+								["Model"] = "models/pac/default.mdl",
+								["ClassName"] = "model2",
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "a857f02dd9a199a619306d1ee0f29c96ef259b5a73e1a6a65b083ff6e3192972",
+						["FollowPartUID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
+						["Bone"] = "right upperarm",
+						["Name"] = "Shoulder",
+						["Angles"] = Angle(15, -69, 0),
+					},
+				},
+				[5] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Angles"] = Angle(0, -49.200000762939, 0),
+										["ClassName"] = "bone3",
+										["UniqueID"] = "418a3b2e6e102510f4b22b654e58ecfbd59c8d328badd53c9c20618e13ea317a",
+										["Bone"] = "right finger 12",
+									},
+								},
+							},
+							["self"] = {
+								["Angles"] = Angle(0, -68.900001525879, 0),
+								["ClassName"] = "bone3",
+								["UniqueID"] = "832eadf63e4608cf0d08b1ef709d2e32b6e51ebf1d5de80549dfb3a78f66499f",
+								["Bone"] = "right finger 11",
+							},
+						},
+					},
+					["self"] = {
+						["Angles"] = Angle(20.200000762939, -43.200000762939, 0),
+						["ClassName"] = "bone3",
+						["UniqueID"] = "12564f7b86cd185736943dbbb4479e41061ed6473be76d88487c8685897ae790",
+						["Bone"] = "right finger 1",
+					},
+				},
+				[6] = {
+					["children"] = {
 						[1] = {
 							["children"] = {
 								[1] = {
@@ -154,22 +227,7 @@
 						["Bone"] = "right finger 2",
 					},
 				},
-				[4] = {
-					["children"] = {
-					},
-					["self"] = {
-						["UniqueID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
-						["Name"] = "Laser Target",
-						["Alpha"] = 0.5,
-						["ClassName"] = "model2",
-						["Size"] = 0.2,
-						["Brightness"] = 91.6,
-						["Bone"] = "hitpos",
-						["Model"] = "models/pac/default.mdl",
-						["Material"] = "red",
-					},
-				},
-				[5] = {
+				[7] = {
 					["children"] = {
 					},
 					["self"] = {
@@ -180,64 +238,6 @@
 						["Bone"] = "right forearm",
 						["Name"] = "Elbow",
 						["EditorExpand"] = true,
-					},
-				},
-				[6] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-							},
-							["self"] = {
-								["UniqueID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
-								["AimPartUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
-								["Name"] = "Shoulder Target",
-								["EditorExpand"] = true,
-								["Size"] = 0,
-								["AngleOffset"] = Angle(70.900001525879, -5, -100),
-								["Position"] = Vector(-10.942000389099, 17.469329833984, -2.5390625),
-								["Bone"] = "pelvis",
-								["Model"] = "models/pac/default.mdl",
-								["ClassName"] = "model2",
-							},
-						},
-					},
-					["self"] = {
-						["ClassName"] = "bone3",
-						["UniqueID"] = "a857f02dd9a199a619306d1ee0f29c96ef259b5a73e1a6a65b083ff6e3192972",
-						["FollowPartUID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
-						["Bone"] = "right upperarm",
-						["Name"] = "Shoulder",
-						["Angles"] = Angle(15, -69, 0),
-					},
-				},
-				[7] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-								[1] = {
-									["children"] = {
-									},
-									["self"] = {
-										["Angles"] = Angle(0, -49.200000762939, 0),
-										["ClassName"] = "bone3",
-										["UniqueID"] = "418a3b2e6e102510f4b22b654e58ecfbd59c8d328badd53c9c20618e13ea317a",
-										["Bone"] = "right finger 12",
-									},
-								},
-							},
-							["self"] = {
-								["Angles"] = Angle(0, -68.900001525879, 0),
-								["ClassName"] = "bone3",
-								["UniqueID"] = "832eadf63e4608cf0d08b1ef709d2e32b6e51ebf1d5de80549dfb3a78f66499f",
-								["Bone"] = "right finger 11",
-							},
-						},
-					},
-					["self"] = {
-						["Angles"] = Angle(20.200000762939, -43.200000762939, 0),
-						["ClassName"] = "bone3",
-						["UniqueID"] = "12564f7b86cd185736943dbbb4479e41061ed6473be76d88487c8685897ae790",
-						["Bone"] = "right finger 1",
 					},
 				},
 				[8] = {
@@ -321,6 +321,18 @@
 		},
 		[2] = {
 			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "entity2",
+				["UniqueID"] = "f4e10951a452f85338bd683d5ca557578cf999b95b3481cf5535a3327145381d",
+				["Model"] = "models/player/suits/male_07_shirt_tie.mdl",
+				["Size"] = 1.0277777777778,
+				["NoDraw"] = true,
+				["Name"] = "Kvarkar | height and hidden player base",
+			},
+		},
+		[3] = {
+			["children"] = {
 				[1] = {
 					["children"] = {
 						[1] = {
@@ -337,7 +349,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 3.6515982174024e-05,
+						["Weight"] = 1.1627153980953e-05,
 						["Flex"] = "jaw_drop",
 						["Name"] = "Voice jaw movement",
 						["UniqueID"] = "58dc591524458d9f7ddd6c574ea8640d9bbf87999cf5fce3d81ecbccea5893eb",
@@ -359,7 +371,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 1.8257991087012e-05,
+						["Weight"] = 5.8135769904766e-06,
 						["Flex"] = "right_part",
 						["Name"] = "Voice lip right_part",
 						["UniqueID"] = "ae222cf69df377b8e056fa7bb8bfbc73b62297eeac1fb2c807bc4aea98def204",
@@ -381,7 +393,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 1.8257991087012e-05,
+						["Weight"] = 5.8135769904766e-06,
 						["Flex"] = "left_part",
 						["Name"] = "Voice lip left_part",
 						["UniqueID"] = "9ee50d31d14e38211ec84730f7f5cea4f11f0c9c6715ecdfa7e792cba58f15f1",
@@ -419,18 +431,6 @@
 				["EyeTargetUID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
 			},
 		},
-		[3] = {
-			["children"] = {
-			},
-			["self"] = {
-				["ClassName"] = "entity2",
-				["UniqueID"] = "f4e10951a452f85338bd683d5ca557578cf999b95b3481cf5535a3327145381d",
-				["Model"] = "models/player/suits/male_07_shirt_tie.mdl",
-				["Size"] = 1.0277777777778,
-				["NoDraw"] = true,
-				["Name"] = "Kvarkar | height and hidden player base",
-			},
-		},
 		[4] = {
 			["children"] = {
 			},
@@ -461,10 +461,10 @@
 			["self"] = {
 				["BoneMerge"] = true,
 				["ClassName"] = "model2",
-				["UniqueID"] = "601c0dd0dd3e75f9ef7b59854caf901770051778ba799c102a7535402621d7e6",
-				["Materials"] = "pac3_cache/4251143052/glasses_aviator;pac3_cache/4251143052/glasses_lens_aviator",
+				["UniqueID"] = "f47df22bfddc88d1dec18a797b2f29bb0e304909f6c3c3e43b13a828d7a628a4",
+				["Materials"] = "pac3_cache/1838716968/glasses_aviator;pac3_cache/1838716968/glasses_lens_aviator",
 				["Name"] = "Fitted aviator sunglasses",
-				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/kvarkar_aviators_v1.zip",
+				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/kvarkar_aviators_v2.zip",
 			},
 		},
 	},
