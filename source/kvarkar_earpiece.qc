@@ -1,4 +1,4 @@
-$modelname "kvarkar/earpiece_fitted_v2.mdl"
+$modelname "kvarkar/earpiece_fitted_v3.mdl"
 $body "earpiece" "kvarkar_earpiece.smd"
 $cdmaterials "models/kvarkar/earpiece_v1/"
 $sequence "idle" "kvarkar_merged_idle.smd" fps 1
