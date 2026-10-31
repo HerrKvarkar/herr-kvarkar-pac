@@ -127,34 +127,6 @@
 					["children"] = {
 						[1] = {
 							["children"] = {
-							},
-							["self"] = {
-								["UniqueID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
-								["AimPartUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
-								["Name"] = "Shoulder Target",
-								["EditorExpand"] = true,
-								["Size"] = 0,
-								["AngleOffset"] = Angle(70.900001525879, -5, -100),
-								["Position"] = Vector(-10.942000389099, 17.469329833984, -2.5390625),
-								["Bone"] = "pelvis",
-								["Model"] = "models/pac/default.mdl",
-								["ClassName"] = "model2",
-							},
-						},
-					},
-					["self"] = {
-						["ClassName"] = "bone3",
-						["UniqueID"] = "a857f02dd9a199a619306d1ee0f29c96ef259b5a73e1a6a65b083ff6e3192972",
-						["FollowPartUID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
-						["Bone"] = "right upperarm",
-						["Name"] = "Shoulder",
-						["Angles"] = Angle(15, -69, 0),
-					},
-				},
-				[4] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
 								[1] = {
 									["children"] = {
 									},
@@ -182,20 +154,7 @@
 						["Bone"] = "right finger 2",
 					},
 				},
-				[5] = {
-					["children"] = {
-					},
-					["self"] = {
-						["ClassName"] = "bone3",
-						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
-						["Angles"] = Angle(0, -69.300003051758, 0),
-						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
-						["Bone"] = "right forearm",
-						["Name"] = "Elbow",
-						["EditorExpand"] = true,
-					},
-				},
-				[6] = {
+				[4] = {
 					["children"] = {
 					},
 					["self"] = {
@@ -210,7 +169,7 @@
 						["Material"] = "red",
 					},
 				},
-				[7] = {
+				[5] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -238,6 +197,47 @@
 						["ClassName"] = "bone3",
 						["UniqueID"] = "12564f7b86cd185736943dbbb4479e41061ed6473be76d88487c8685897ae790",
 						["Bone"] = "right finger 1",
+					},
+				},
+				[6] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["UniqueID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
+								["AimPartUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
+								["Name"] = "Shoulder Target",
+								["EditorExpand"] = true,
+								["Size"] = 0,
+								["AngleOffset"] = Angle(70.900001525879, -5, -100),
+								["Position"] = Vector(-10.942000389099, 17.469329833984, -2.5390625),
+								["Bone"] = "pelvis",
+								["Model"] = "models/pac/default.mdl",
+								["ClassName"] = "model2",
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "a857f02dd9a199a619306d1ee0f29c96ef259b5a73e1a6a65b083ff6e3192972",
+						["FollowPartUID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
+						["Bone"] = "right upperarm",
+						["Name"] = "Shoulder",
+						["Angles"] = Angle(15, -69, 0),
+					},
+				},
+				[7] = {
+					["children"] = {
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
+						["Angles"] = Angle(0, -69.300003051758, 0),
+						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
+						["Bone"] = "right forearm",
+						["Name"] = "Elbow",
+						["EditorExpand"] = true,
 					},
 				},
 				[8] = {
@@ -323,24 +323,24 @@
 			["children"] = {
 			},
 			["self"] = {
-				["BoneMerge"] = true,
-				["ClassName"] = "model2",
-				["UniqueID"] = "a17b463d2212e068c6d2d38e74847f683fbcdfc3e3d52d85ecd94746617d9fa0",
-				["Materials"] = "pac3_cache/3147035544/kvarkar_earpiece",
-				["Name"] = "Covert earpiece",
-				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/kvarkar_earpiece_fitted_v4.zip",
+				["ClassName"] = "entity2",
+				["UniqueID"] = "f4e10951a452f85338bd683d5ca557578cf999b95b3481cf5535a3327145381d",
+				["Model"] = "models/player/suits/male_07_shirt_tie.mdl",
+				["Name"] = "Kvarkar | height and hidden player base",
+				["NoDraw"] = true,
+				["Scale"] = Vector(1.0972222089767, 1.0972222089767, 1.0972222089767),
 			},
 		},
 		[3] = {
 			["children"] = {
 			},
 			["self"] = {
-				["ClassName"] = "entity2",
-				["UniqueID"] = "f4e10951a452f85338bd683d5ca557578cf999b95b3481cf5535a3327145381d",
-				["Model"] = "models/player/suits/male_07_shirt_tie.mdl",
-				["Size"] = 1.0972222222222,
-				["NoDraw"] = true,
-				["Name"] = "Kvarkar | height and hidden player base",
+				["BoneMerge"] = true,
+				["ClassName"] = "model2",
+				["UniqueID"] = "a17b463d2212e068c6d2d38e74847f683fbcdfc3e3d52d85ecd94746617d9fa0",
+				["Materials"] = "pac3_cache/3147035544/kvarkar_earpiece",
+				["Name"] = "Covert earpiece",
+				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/kvarkar_earpiece_fitted_v4.zip",
 			},
 		},
 		[4] = {
@@ -361,7 +361,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 3.2223825655819e-05,
+						["Weight"] = 0.0010621681285556,
 						["Flex"] = "jaw_drop",
 						["Name"] = "Voice jaw movement",
 						["UniqueID"] = "58dc591524458d9f7ddd6c574ea8640d9bbf87999cf5fce3d81ecbccea5893eb",
@@ -383,7 +383,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 1.611191282791e-05,
+						["Weight"] = 0.00053108406427782,
 						["Flex"] = "right_part",
 						["Name"] = "Voice lip right_part",
 						["UniqueID"] = "ae222cf69df377b8e056fa7bb8bfbc73b62297eeac1fb2c807bc4aea98def204",
@@ -405,7 +405,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 1.611191282791e-05,
+						["Weight"] = 0.00053108406427782,
 						["Flex"] = "left_part",
 						["Name"] = "Voice lip left_part",
 						["UniqueID"] = "9ee50d31d14e38211ec84730f7f5cea4f11f0c9c6715ecdfa7e792cba58f15f1",
@@ -426,10 +426,11 @@
 						},
 					},
 					["self"] = {
-						["Flex"] = "blink",
 						["ClassName"] = "flex",
-						["UniqueID"] = "4a254ec8a137f1a373566a7954e3673857ad1a6c6f5202a185389cd3c3cd4563",
+						["Weight"] = 0.67234718022687,
+						["Flex"] = "blink",
 						["Name"] = "Natural blink",
+						["UniqueID"] = "4a254ec8a137f1a373566a7954e3673857ad1a6c6f5202a185389cd3c3cd4563",
 					},
 				},
 			},

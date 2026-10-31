@@ -2,6 +2,8 @@
 
 V2 was approved and worn on 31 October 2026. Load `herr_kvarkar_ea_field_agent.txt` or the versioned `herr_kvarkar_ea_field_agent_v2.txt`. The V1 save remains available for rollback.
 
+The hidden player entity uses Size 1 and a uniform visual Scale of 79/72. This replaces the previous Size multiplier, which caused stationary camera jitter during live use; the user confirmed the changed settings resolved it.
+
 V2 has a taller 6'7" visual scale, a stronger upper-body silhouette and a naturally tapered face. The fine-grain black leather coat reaches below the knee and has two independent, damped coat-tail bones. Matching black field trousers and lace-up boots retain their original ankle joins. Pocket panels sit on the outer thighs; the belt stays at the waist. The gloves are black leather, the complete shirt collar is retained, and the tie uses the shirt's front-surface skinning and clearance. The provided External Affairs handshake emblem is shallow geometry relief on the upper back. The third coat button keeps its original round geometry.
 
 The visible character is still one compiled MDL, with the existing opaque aviators and earpiece as separate accessories. Runtime content is in `assets/herr_kvarkar_character_v2_preview_r7_waistfix.zip` (13,800,674 bytes, below the verified 15 MiB server download limit). The full-resolution shirt uses DXT5 compression; the face texture remains unchanged. Final V2 model source and reproducible build/package scripts are under `source/v2/`; the texture masters and prompts are documented in [source/texture-generation.md](source/texture-generation.md).
