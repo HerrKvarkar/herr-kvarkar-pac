@@ -1,7 +1,6 @@
 "VertexLitGeneric"
 {
  "$basetexture" "models/kvarkar/v2/field_trousers_clean_diffuse"
- "$bumpmap" "models/kvarkar/v2/boots_normal"
  "$model" "1"
  "$halflambert" "1"
 }

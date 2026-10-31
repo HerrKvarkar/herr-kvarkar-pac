@@ -67,7 +67,7 @@ for source in (args.game/'models/kvarkar').glob(f'herr_kvarkar_v2_r{args.revisio
     shutil.copy2(source,dest)
     files.append(dest)
 assert any(p.suffix=='.mdl' for p in files)
-output=REPO/'assets'/f'herr_kvarkar_character_v2_preview_r{args.revision}_compact.zip'
+output=REPO/'assets'/f'herr_kvarkar_character_v2_preview_r{args.revision}_waistfix.zip'
 with zipfile.ZipFile(output,'w',zipfile.ZIP_STORED) as archive:
     for path in sorted(set(files)):
         archive.write(path,path.relative_to(stage).as_posix())
