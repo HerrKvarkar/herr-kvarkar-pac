@@ -6,7 +6,7 @@ Copy `herr_kvarkar_ea_field_agent.txt` into `garrysmod/data/pac3/`, then load **
 
 - `assets/herr_kvarkar_character_v4.zip`: complete character and textures, including the animated male07 face.
 - `assets/kvarkar_earpiece_fitted_v3.zip`: fitted accessory mesh and charcoal material.
-- `assets/kvarkar_sunglasses.zip`: source aviator model and dependencies, masked to the glasses in PAC.
+- `assets/kvarkar_aviators_v1.zip`: aviator glasses compiled as a standalone accessory.
 - `assets/kvarkar_laser_pointer.zip`: retained base-outfit laser model and dependencies.
 - `assets/kvarkar_face_final.png`, `assets/kvarkar_dea_red_diffuse_final.png`: generated texture masters.
 - `source/`: final SMD, VTA and QC files for recompilation. Compile `kvarkar_animated.qc` and `kvarkar_earpiece.qc` with Garry's Mod's `bin/studiomdl.exe`, using `-game` to point at the game directory.
