@@ -41,6 +41,16 @@ for master,texture,size in [
     with (materials/texture).open('wb') as stream:
         texture_data.save(stream)
 
+# Preserve the shirt's full resolution while avoiding its uncompressed RGBA payload.
+shirt_path=materials/'dea_red.vtf'
+with shirt_path.open('rb') as stream:
+    shirt=VTF.read(stream)
+    shirt_pixels=shirt.get().to_PIL().convert('RGBA').tobytes()
+compressed=VTF(shirt.width,shirt.height,version=(7,2),fmt=ImageFormats.DXT5,flags=shirt.flags)
+compressed.get().copy_from(shirt_pixels)
+with shirt_path.open('wb') as stream:
+    compressed.save(stream)
+
 names=['kvarkar_face','kvarkar_mouth','kvarkar_eye_l','kvarkar_eye_r','kvarkar_dea_trousers',
        'kvarkar_dea_shirt','kvarkar_leather_gloves','kvarkar_black_tie','kvarkar_leather_coat_fine',
        'kvarkar_hair','kvarkar_field_boots','kvarkar_field_trousers_clean','kvarkar_field_pocket','kvarkar_dea_emboss']
@@ -57,12 +67,12 @@ for source in (args.game/'models/kvarkar').glob(f'herr_kvarkar_v2_r{args.revisio
     shutil.copy2(source,dest)
     files.append(dest)
 assert any(p.suffix=='.mdl' for p in files)
-output=REPO/'assets'/f'herr_kvarkar_character_v2_preview_r{args.revision}.zip'
+output=REPO/'assets'/f'herr_kvarkar_character_v2_preview_r{args.revision}_compact.zip'
 with zipfile.ZipFile(output,'w',zipfile.ZIP_STORED) as archive:
     for path in sorted(set(files)):
         archive.write(path,path.relative_to(stage).as_posix())
 with zipfile.ZipFile(output) as archive:
     assert archive.testzip() is None
     assert len([n for n in archive.namelist() if n.endswith('.mdl')])==1
-assert output.stat().st_size<16*1024*1024,'Model pack exceeds PAC download size budget'
+assert output.stat().st_size<15360*1024,'Model pack exceeds the verified server PAC download limit'
 print(f'{output.name}: {output.stat().st_size:,} bytes, one MDL, all texture dependencies checked')
