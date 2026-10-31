@@ -1,6 +1,6 @@
-# Herr Kvarkar — V2 local preview
+# Herr Kvarkar — V2
 
-This branch contains the V2 review build. **It is not approved for wearing yet.** Load `herr_kvarkar_ea_field_agent_v2_preview.txt` to review it locally; keep the V1 save for rollback.
+V2 was approved and worn on 31 October 2026. Load `herr_kvarkar_ea_field_agent.txt` or the versioned `herr_kvarkar_ea_field_agent_v2.txt`. The V1 save remains available for rollback.
 
 V2 has a taller 6'7" visual scale, a stronger upper-body silhouette and a naturally tapered face. The fine-grain black leather coat reaches below the knee and has two independent, damped coat-tail bones. Matching black field trousers and lace-up boots retain their original ankle joins. Pocket panels sit on the outer thighs; the belt stays at the waist. The gloves are black leather, the complete shirt collar is retained, and the tie uses the shirt's front-surface skinning and clearance. The provided External Affairs handshake emblem is shallow geometry relief on the upper back. The third coat button keeps its original round geometry.
 
