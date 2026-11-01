@@ -1,7 +1,17 @@
 {
   "shared_base": {
     "source": "source/v2",
-    "preserve": ["face", "hair", "facial animation", "build", "trousers", "boots", "gloves", "sunglasses", "earpiece"],
+    "preserve": [
+      "face",
+      "hair",
+      "facial animation",
+      "build",
+      "trousers",
+      "boots",
+      "gloves",
+      "sunglasses",
+      "earpiece"
+    ],
     "player_size": 1,
     "visual_scale": 1.0972222222222223
   },
@@ -12,11 +22,20 @@
       "coat_material": "kvarkar_isd_leather_coat.vmt",
       "coat_accent_master": "assets/kvarkar_leather_coat_isd_blue_accents.png",
       "coat_accent_colour": "muted ISD blue",
-      "tie": false,
+      "tie": true,
       "armour": "isd_kevlar",
       "skin": 0,
-      "bodygroups": {"Department armour": 1, "Tie": 0},
-      "accessories": {"sunglasses": true, "earpiece": true, "ammo_pouches": false, "department_identification": "ISD"}
+      "bodygroups": {
+        "Department armour": 1,
+        "Tie": 2
+      },
+      "accessories": {
+        "sunglasses": true,
+        "earpiece": true,
+        "ammo_pouches": false,
+        "department_identification": "ISD"
+      },
+      "tie_style": "tucked beneath armour"
     },
     "dea": {
       "display_name": "Herr Kvarkar | DEA",
@@ -27,8 +46,16 @@
       "tie": true,
       "armour": null,
       "skin": 1,
-      "bodygroups": {"Department armour": 0, "Tie": 1},
-      "accessories": {"sunglasses": true, "earpiece": true, "ammo_pouches": false, "department_identification": "DEA"}
+      "bodygroups": {
+        "Department armour": 0,
+        "Tie": 1
+      },
+      "accessories": {
+        "sunglasses": true,
+        "earpiece": true,
+        "ammo_pouches": false,
+        "department_identification": "DEA"
+      }
     }
   }
 }
