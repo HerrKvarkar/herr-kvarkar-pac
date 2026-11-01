@@ -142,6 +142,29 @@ for name in ['helmet_shell','helmet_rails','helmet_mounts']:helmet+=donor(name,'
 headset=donor('headset','kvarkar_cm_headset.vmt')
 # The donor contains a detached three-triangle mic cap without its wire.
 headset=[(m,t) for m,t in headset if not (max(v['p'][2] for v in t)<62.55 and max(v['p'][1] for v in t)<-3.7)]
+# Size the shell to the measured skull and tighten the native lower webbing
+# continuously, preserving the original strap/buckle assembly and its skinning.
+scale=np.array([.92,.94,1.]);center=np.array([-.1,-.5,68.])
+contacts=0
+# Apply the same continuous fitting cage to every helmet submesh, including
+# the strap sections welded to the shell, so their joins remain connected.
+for _,tri in helmet:
+ for v in tri:
+  v['p']=center+(v['p']-center)*scale
+  v['n']=v['n']/scale;v['n']/=max(np.linalg.norm(v['n']),1e-9)
+  x,y,z=v['p'];t=min(1.,max(0.,(68.-z)/6.));f=t*t*(3.-2.*t)
+  derivative=-6.*t*(1.-t)/6. if 0<t<1 else 0.
+  sx=1.-.10*f;sy=1.-(.10*f if y<-.5 else 0.)
+  dx=-.10*derivative;dy=-.10*derivative if y<-.5 else 0.
+  jac=np.array([[sx,0.,(x+.1)*dx],[0.,sy,(y+.5)*dy],[0.,0.,1.+.55*derivative]])
+  v['p']=np.array([-.1+(x+.1)*sx,-.5+(y+.5)*sy,z+.55*f])
+  v['n']=np.linalg.solve(jac.T,v['n']);v['n']/=max(np.linalg.norm(v['n']),1e-9)
+  if f>0:contacts+=1
+for _,tri in headset:
+ for v in tri:
+  x=v['p'][0];v['p'][0]-=np.sign(x)*.25*min(1.,abs(x)/2.)
+  v['p'][1]=-.5+(v['p'][1]+.5)*.94
+print(json.dumps({'helmetWidthScale':.92,'helmetDepthScale':.94,'fittedStrapVertices':contacts}))
 shell=[tri for m,tri in helmet if m=='kvarkar_cm_helmet_shell.vmt' and min(v['p'][2] for v in tri)>67.]
 cap=np.array([[v['p'] for v in tri] for tri in shell]);a=cap[:,0];e1=cap[:,1]-a;e2=cap[:,2]-a
 origin=np.array([0.,0.,67.2]);s=origin-a;q=np.cross(s,e1)
@@ -206,7 +229,7 @@ write_smd(OUT/'kvarkar_cm_back_emblem.smd',header,emblem)
 write_smd(OUT/'kvarkar_cm_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
 qc=(REPO/'source/v2/kvarkar_animated.qc').read_text(encoding='utf-8')
-qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_combat_medic_r2.mdl').replace('"kvarkar_costume.smd"','"kvarkar_cm_costume.smd"').replace('costume_and_hair','costume')
+qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_combat_medic_r6.mdl').replace('"kvarkar_costume.smd"','"kvarkar_cm_costume.smd"').replace('costume_and_hair','costume')
 qc=qc.replace('$cdmaterials "models/kvarkar/v2/"','$cdmaterials "models/kvarkar/combat_medic/"\n$cdmaterials "models/kvarkar/v2/"')
 qc+='\n$bodygroup "Department armour" {\n blank\n studio "kvarkar_cm_armour.smd"\n}\n'
 qc+='\n$bodygroup "Medical kit" {\n blank\n studio "kvarkar_cm_medical_kit.smd"\n}\n'
@@ -215,3 +238,4 @@ qc+='\n$bodygroup "Department insignia" {\n studio "kvarkar_plain_back_panel.smd
 (OUT/'kvarkar_combat_medic.qc').write_text('\n'.join(line.rstrip() for line in qc.splitlines())+'\n',encoding='utf-8')
 summary={'costumeTriangles':len(costume),'vestTriangles':len(vest),'kitTriangles':len(kit),'helmetTriangles':len(helmet),'headsetTriangles':len(headset),'blueGloveTriangles':len(gloves),'tuckedHairVertices':changed,'maxCrownTuck':max_change,'matchedArmourVertices':matched,'emblemTriangles':len(emblem),'customRunningOverride':False}
 (OUT/'build-status.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8');print(json.dumps(summary))
+

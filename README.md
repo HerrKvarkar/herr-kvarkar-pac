@@ -15,7 +15,7 @@ The character, gloves, armour and all headgear choices are one compiled MDL. Sel
 
 The helmet variants tuck only the crown under the shell; the original normal hairstyle and hair below the helmet rim remain unchanged. The lower coat mesh, skin weights and damped tail settings match the approved ISD source. The supplied face texture and hair colour/alpha texture are byte-identical to the approved base. Native review covered standing and running front/side views, helmet clearance and the normal-hair option. All 19 materials load and all 61 facial controls remain present. Review renders use separate offscreen models and leave the player camera unchanged.
 
-Runtime pack: `assets/herr_kvarkar_combat_medic_r2.zip`, **15,325,118 bytes**, below the verified 15 MiB server limit. Opaque equipment diffuse textures use DXT1; smaller hardware normal/mask maps and the hair normal map are resized to fit the budget. The face and hair colour/alpha are preserved. The profile and defaults are in `department_profiles.json`.
+Runtime pack: `assets/herr_kvarkar_combat_medic_r6.zip`, **15,325,118 bytes**, below the verified 15 MiB server limit. Opaque equipment diffuse textures use DXT1; smaller hardware normal/mask maps and the hair normal map are resized to fit the budget. The face and hair colour/alpha are preserved. The profile and defaults are in `department_profiles.json`.
 
 Build with `python source/combat_medic/build_combat_medic.py`, compile `source/combat_medic/kvarkar_combat_medic.qc` using the game's noninteractive `studiomdl.exe`, then run `python source/combat_medic/package_combat_medic.py`. The source uses the approved ISD coat cutout plus native donor meshes/materials stored under `source/combat_medic/`. No model viewer is required.
 
@@ -87,3 +87,6 @@ The worn ISD emblem is now a subtle 0.025-unit leather relief using the original
 
 
 All authored PAC saves now use the server’s normal running animations. The inherited `run_all_02` holdtype override and its sprint-event group were removed from department saves, legacy aliases and the V1 archive on 1 November 2026. The same override was removed from the currently worn outfit.
+
+
+Helmet fit revision: narrower shell, closer headset and smoothly tightened chin straps; normal hair and the approved coat rig remain unchanged.

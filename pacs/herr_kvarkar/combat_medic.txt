@@ -109,7 +109,7 @@
 				["Materials"] = "pac3_cache/4230238336/kvarkar_face;pac3_cache/4230238336/kvarkar_mouth;pac3_cache/4230238336/kvarkar_eye_l;pac3_cache/4230238336/kvarkar_eye_r;pac3_cache/4230238336/kvarkar_dea_trousers;pac3_cache/4230238336/kvarkar_cm_shirt;pac3_cache/4230238336/kvarkar_field_boots;pac3_cache/4230238336/kvarkar_field_trousers_clean;pac3_cache/4230238336/kvarkar_field_pocket;pac3_cache/4230238336/kvarkar_leather_coat_fine;pac3_cache/4230238336/kvarkar_cm_blue_gloves;pac3_cache/4230238336/kvarkar_cm_vest;pac3_cache/4230238336/kvarkar_cm_fieldkit;pac3_cache/4230238336/kvarkar_hair;pac3_cache/4230238336/kvarkar_cm_helmet_shell;pac3_cache/4230238336/kvarkar_cm_helmet_rails;pac3_cache/4230238336/kvarkar_cm_helmet_mounts;pac3_cache/4230238336/kvarkar_cm_headset;pac3_cache/4230238336/kvarkar_cm_leather_emboss",
 				["Name"] = "Character | Combat Medic",
 				["ClassName"] = "model2",
-				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_combat_medic_r2.zip",
+				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_combat_medic_r6.zip",
 				["ModelModifiers"] = "Department armour=1;Medical kit=0;Headgear=2;Department insignia=1;skin=0;",
 				["EyeTargetUID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
 			},
@@ -410,3 +410,4 @@
 		["UniqueID"] = "f967aa3b20b7fc28afd7c6459abaf31f082de5eaafdb93c449ef29d2e73b919d",
 	},
 },
+
