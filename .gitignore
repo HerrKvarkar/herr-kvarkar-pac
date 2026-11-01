@@ -54,3 +54,15 @@
 !/previews/rear.png
 !/previews/mouth-test.png
 !/previews/v2-*.png
+
+!/source/isd/
+/source/isd/*
+!/source/isd/*.py
+!/source/isd/*.md
+!/source/isd/*.json
+!/source/isd/*.smd
+!/source/isd/*.vta
+!/source/isd/*.qc
+!/source/isd/materials/
+!/source/isd/materials/*.vmt
+!/source/isd/materials/*.vtf

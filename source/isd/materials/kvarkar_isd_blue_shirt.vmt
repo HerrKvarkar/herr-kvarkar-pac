@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+    "$baseTexture" "models/kvarkar/isd/suit_shirtx"
+    "$bumpmap" "models/kvarkar/isd/suit_shirt_n"
+    "$model" 1
+
+    "$normalmapalphaenvmapmask" 1
+    "$envmapcontrast" 1
+    "$surfaceprop" "flesh"
+    "$phong" "1"
+    "$phongexponent" "20"
+    "$phongboost" "0.01"    
+    "$phongfresnelranges"    "[.1 0.2 1]"
+    "$halflambert" "1"
+
+
+    "$rimlight" "1"                                        
+    "$rimlightexponent" "20"                            
+    "$rimlightboost" "0.1"
+
+}

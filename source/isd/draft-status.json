@@ -1,0 +1,19 @@
+{
+  "state": "source draft only; not compiled or worn",
+  "armour_triangles": 946,
+  "bounds": [
+    [
+      -7.324722719020555,
+      -7.063832520008219,
+      41.298658318852354
+    ],
+    [
+      7.327776112374748,
+      6.387837540762736,
+      62.239576266808015
+    ]
+  ],
+  "independentArmourBodygroup": true,
+  "source": "G:\\ChatGPT\\kvarkar_pac_research\\isd_reference\\models\\frostbyte\\ia\\internalsecurity_mike.mdl",
+  "coatFitTested": false
+}
