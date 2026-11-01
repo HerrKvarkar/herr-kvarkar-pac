@@ -30,7 +30,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 0.00042223178024869,
+						["Weight"] = 0.00031044500065036,
 						["Flex"] = "left_part",
 						["Name"] = "Voice lip left_part",
 						["UniqueID"] = "9ee50d31d14e38211ec84730f7f5cea4f11f0c9c6715ecdfa7e792cba58f15f1",
@@ -73,7 +73,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 0.00084446356049739,
+						["Weight"] = 0.00062089000130072,
 						["Flex"] = "jaw_drop",
 						["Name"] = "Voice jaw movement",
 						["UniqueID"] = "58dc591524458d9f7ddd6c574ea8640d9bbf87999cf5fce3d81ecbccea5893eb",
@@ -95,7 +95,7 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 0.00042223178024869,
+						["Weight"] = 0.00031044500065036,
 						["Flex"] = "right_part",
 						["Name"] = "Voice lip right_part",
 						["UniqueID"] = "ae222cf69df377b8e056fa7bb8bfbc73b62297eeac1fb2c807bc4aea98def204",
@@ -106,7 +106,7 @@
 				["BoneMerge"] = true,
 				["UniqueID"] = "e753b006983d5eee3c3d16944efb711b56842e6b0ffa2b17dae99d6104705019",
 				["Notes"] = "Combat Medic: blue gloves; medical armour; loose coat. Headgear: 0 normal hair, 1 helmet with tucked hair, 2 helmet and headset with tucked hair. Department armour and Department insignia: 0 off/1 on. Medical kit is off by default. No running animation override.",
-				["Materials"] = "pac3_cache/4230238336/kvarkar_face;pac3_cache/4230238336/kvarkar_mouth;pac3_cache/4230238336/kvarkar_eye_l;pac3_cache/4230238336/kvarkar_eye_r;pac3_cache/4230238336/kvarkar_dea_trousers;pac3_cache/4230238336/kvarkar_cm_shirt;pac3_cache/4230238336/kvarkar_field_boots;pac3_cache/4230238336/kvarkar_field_trousers_clean;pac3_cache/4230238336/kvarkar_field_pocket;pac3_cache/4230238336/kvarkar_leather_coat_fine;pac3_cache/4230238336/kvarkar_cm_blue_gloves;pac3_cache/4230238336/kvarkar_cm_vest;pac3_cache/4230238336/kvarkar_cm_fieldkit;pac3_cache/4230238336/kvarkar_hair;pac3_cache/4230238336/kvarkar_cm_helmet_shell;pac3_cache/4230238336/kvarkar_cm_helmet_rails;pac3_cache/4230238336/kvarkar_cm_helmet_mounts;pac3_cache/4230238336/kvarkar_cm_headset;pac3_cache/4230238336/kvarkar_cm_leather_emboss",
+				["Materials"] = "pac3_cache/3226295671/kvarkar_face;pac3_cache/3226295671/kvarkar_mouth;pac3_cache/3226295671/kvarkar_eye_l;pac3_cache/3226295671/kvarkar_eye_r;pac3_cache/3226295671/kvarkar_dea_trousers;pac3_cache/3226295671/kvarkar_cm_shirt;pac3_cache/3226295671/kvarkar_field_boots;pac3_cache/3226295671/kvarkar_field_trousers_clean;pac3_cache/3226295671/kvarkar_field_pocket;pac3_cache/3226295671/kvarkar_leather_coat_fine;pac3_cache/3226295671/kvarkar_cm_blue_gloves;pac3_cache/3226295671/kvarkar_cm_vest;pac3_cache/3226295671/kvarkar_cm_fieldkit;pac3_cache/3226295671/kvarkar_hair;pac3_cache/3226295671/kvarkar_cm_helmet_shell;pac3_cache/3226295671/kvarkar_cm_helmet_rails;pac3_cache/3226295671/kvarkar_cm_helmet_mounts;pac3_cache/3226295671/kvarkar_cm_headset;pac3_cache/3226295671/kvarkar_cm_leather_emboss",
 				["Name"] = "Character | Combat Medic",
 				["ClassName"] = "model2",
 				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_combat_medic_r6.zip",
@@ -208,36 +208,6 @@
 									["children"] = {
 									},
 									["self"] = {
-										["Angles"] = Angle(0, -49.200000762939, 0),
-										["ClassName"] = "bone3",
-										["UniqueID"] = "418a3b2e6e102510f4b22b654e58ecfbd59c8d328badd53c9c20618e13ea317a",
-										["Bone"] = "right finger 12",
-									},
-								},
-							},
-							["self"] = {
-								["Angles"] = Angle(0, -68.900001525879, 0),
-								["ClassName"] = "bone3",
-								["UniqueID"] = "832eadf63e4608cf0d08b1ef709d2e32b6e51ebf1d5de80549dfb3a78f66499f",
-								["Bone"] = "right finger 11",
-							},
-						},
-					},
-					["self"] = {
-						["Angles"] = Angle(20.200000762939, -43.200000762939, 0),
-						["ClassName"] = "bone3",
-						["UniqueID"] = "12564f7b86cd185736943dbbb4479e41061ed6473be76d88487c8685897ae790",
-						["Bone"] = "right finger 1",
-					},
-				},
-				[4] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-								[1] = {
-									["children"] = {
-									},
-									["self"] = {
 										["UniqueID"] = "965e58d5bb47348148e60f9dbbe3800d24cb19b607058c91b0156d96a38e3f10",
 										["Bend"] = 0,
 										["Name"] = "Beam",
@@ -274,7 +244,65 @@
 						["Position"] = Vector(4.0999999046326, -0.69999998807907, -1.5),
 					},
 				},
+				[4] = {
+					["children"] = {
+					},
+					["self"] = {
+						["UniqueID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
+						["Name"] = "Laser Target",
+						["Alpha"] = 0.5,
+						["ClassName"] = "model2",
+						["Size"] = 0.2,
+						["Brightness"] = 91.6,
+						["Bone"] = "hitpos",
+						["Model"] = "models/pac/default.mdl",
+						["Material"] = "red",
+					},
+				},
 				[5] = {
+					["children"] = {
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
+						["Angles"] = Angle(0, -69.300003051758, 0),
+						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
+						["Bone"] = "right forearm",
+						["Name"] = "Elbow",
+						["EditorExpand"] = true,
+					},
+				},
+				[6] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Angles"] = Angle(0, -49.200000762939, 0),
+										["ClassName"] = "bone3",
+										["UniqueID"] = "418a3b2e6e102510f4b22b654e58ecfbd59c8d328badd53c9c20618e13ea317a",
+										["Bone"] = "right finger 12",
+									},
+								},
+							},
+							["self"] = {
+								["Angles"] = Angle(0, -68.900001525879, 0),
+								["ClassName"] = "bone3",
+								["UniqueID"] = "832eadf63e4608cf0d08b1ef709d2e32b6e51ebf1d5de80549dfb3a78f66499f",
+								["Bone"] = "right finger 11",
+							},
+						},
+					},
+					["self"] = {
+						["Angles"] = Angle(20.200000762939, -43.200000762939, 0),
+						["ClassName"] = "bone3",
+						["UniqueID"] = "12564f7b86cd185736943dbbb4479e41061ed6473be76d88487c8685897ae790",
+						["Bone"] = "right finger 1",
+					},
+				},
+				[7] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -303,34 +331,6 @@
 						["ClassName"] = "bone3",
 						["UniqueID"] = "f8f6100202d7e1852b247ff966e72930c2ab085187d36cd5871237f80f69b8d6",
 						["Bone"] = "right finger 2",
-					},
-				},
-				[6] = {
-					["children"] = {
-					},
-					["self"] = {
-						["UniqueID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
-						["Name"] = "Laser Target",
-						["Alpha"] = 0.5,
-						["ClassName"] = "model2",
-						["Size"] = 0.2,
-						["Brightness"] = 91.6,
-						["Bone"] = "hitpos",
-						["Model"] = "models/pac/default.mdl",
-						["Material"] = "red",
-					},
-				},
-				[7] = {
-					["children"] = {
-					},
-					["self"] = {
-						["ClassName"] = "bone3",
-						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
-						["Angles"] = Angle(0, -69.300003051758, 0),
-						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
-						["Bone"] = "right forearm",
-						["Name"] = "Elbow",
-						["EditorExpand"] = true,
 					},
 				},
 				[8] = {
@@ -410,4 +410,3 @@
 		["UniqueID"] = "f967aa3b20b7fc28afd7c6459abaf31f082de5eaafdb93c449ef29d2e73b919d",
 	},
 },
-
