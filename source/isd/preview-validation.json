@@ -1,11 +1,11 @@
 {
   "worn": true,
-  "model": "models/pac3_cache/3906469811/model.mdl",
+  "model": "models/pac3_cache/3751631672/model.mdl",
   "viewOffset": 64,
   "tie": 2,
   "skin": 0,
   "flexes": 61,
-  "url": "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_department_r6a.zip",
+  "url": "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_department_r7.zip",
   "materials": 18,
   "armour": 1,
   "serverAcceptedRoots": 4,
@@ -13,10 +13,14 @@
   "approvedDate": "2026-11-01",
   "insignia": 1,
   "coatMatchedArmourVertices": 1788,
-  "emblemTriangles": 854,
+  "emblemTriangles": 7358,
   "checkedPoses": [
     "idle_all_01",
     "run_all_01: .25 front, .75 side, .50 back"
   ],
-  "cameraRegistryEntryRemoved": true
+  "cameraRegistryEntryRemoved": true,
+  "embossDepth": 0.025,
+  "embossTint": 0.82,
+  "emblemUsesCoatUVs": true,
+  "emblemUsesLogoColourTexture": false
 }

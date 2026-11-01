@@ -144,37 +144,6 @@
 									["children"] = {
 									},
 									["self"] = {
-										["Bone"] = "right finger 42",
-										["ClassName"] = "bone3",
-										["UniqueID"] = "481c5c21efc0095fd1bd3d8ac49a815e12fd0f9a8da1cb33ffdc46b8460bf313",
-										["Angles"] = Angle(0, -28.799999237061, 0),
-									},
-								},
-							},
-							["self"] = {
-								["Angles"] = Angle(0, -69.199996948242, 0),
-								["UniqueID"] = "2acf3a1db7d9072e33ce56010933052576044cfeda04b2afa541c04603d1e45a",
-								["Bone"] = "right finger 41",
-								["ClassName"] = "bone3",
-								["EditorExpand"] = true,
-							},
-						},
-					},
-					["self"] = {
-						["Bone"] = "right finger 4",
-						["ClassName"] = "bone3",
-						["UniqueID"] = "8940e0cd15c66df9ac9d575da588d1dd61f3da9af694e43556f7157b948b1cbf",
-						["Angles"] = Angle(-23.39999961853, -54.700000762939, 0),
-					},
-				},
-				[4] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-								[1] = {
-									["children"] = {
-									},
-									["self"] = {
 										["Bone"] = "right finger 12",
 										["ClassName"] = "bone3",
 										["UniqueID"] = "418a3b2e6e102510f4b22b654e58ecfbd59c8d328badd53c9c20618e13ea317a",
@@ -197,20 +166,7 @@
 						["Angles"] = Angle(20.200000762939, -43.200000762939, 0),
 					},
 				},
-				[5] = {
-					["children"] = {
-					},
-					["self"] = {
-						["ClassName"] = "bone3",
-						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
-						["EditorExpand"] = true,
-						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
-						["Bone"] = "right forearm",
-						["Name"] = "Elbow",
-						["Angles"] = Angle(0, -69.300003051758, 0),
-					},
-				},
-				[6] = {
+				[4] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -241,7 +197,7 @@
 						["Angles"] = Angle(0, -46.900001525879, 0),
 					},
 				},
-				[7] = {
+				[5] = {
 					["children"] = {
 					},
 					["self"] = {
@@ -254,6 +210,50 @@
 						["Bone"] = "hitpos",
 						["Model"] = "models/pac/default.mdl",
 						["Brightness"] = 91.6,
+					},
+				},
+				[6] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Bone"] = "right finger 42",
+										["ClassName"] = "bone3",
+										["UniqueID"] = "481c5c21efc0095fd1bd3d8ac49a815e12fd0f9a8da1cb33ffdc46b8460bf313",
+										["Angles"] = Angle(0, -28.799999237061, 0),
+									},
+								},
+							},
+							["self"] = {
+								["Angles"] = Angle(0, -69.199996948242, 0),
+								["UniqueID"] = "2acf3a1db7d9072e33ce56010933052576044cfeda04b2afa541c04603d1e45a",
+								["Bone"] = "right finger 41",
+								["ClassName"] = "bone3",
+								["EditorExpand"] = true,
+							},
+						},
+					},
+					["self"] = {
+						["Bone"] = "right finger 4",
+						["ClassName"] = "bone3",
+						["UniqueID"] = "8940e0cd15c66df9ac9d575da588d1dd61f3da9af694e43556f7157b948b1cbf",
+						["Angles"] = Angle(-23.39999961853, -54.700000762939, 0),
+					},
+				},
+				[7] = {
+					["children"] = {
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
+						["EditorExpand"] = true,
+						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
+						["Bone"] = "right forearm",
+						["Name"] = "Elbow",
+						["Angles"] = Angle(0, -69.300003051758, 0),
 					},
 				},
 				[8] = {
@@ -344,19 +344,6 @@
 			},
 		},
 		[2] = {
-			["children"] = {
-			},
-			["self"] = {
-				["ClassName"] = "model2",
-				["Position"] = Vector(17.192800521851, -98.510902404785, 0),
-				["UniqueID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
-				["Name"] = "Natural forward gaze",
-				["Hide"] = true,
-				["Model"] = "models/pac/default.mdl",
-				["Size"] = 0,
-			},
-		},
-		[3] = {
 			["children"] = {
 				[1] = {
 					["children"] = {
@@ -451,12 +438,25 @@
 				["Skin"] = 0,
 				["UniqueID"] = "e753b006983d5eee3c3d16944efb711b56842e6b0ffa2b17dae99d6104705019",
 				["Notes"] = "Skin: 0 ISD blue, 1 DEA red. Department armour: 0 off, 1 Kevlar. Tie: 0 off, 1 full, 2 tucked. Department insignia: 0 off, 1 ISD scales, 2 DEA handshake. Accessories are independently named parts.",
-				["Materials"] = "pac3_cache/3906469811/kvarkar_face;pac3_cache/3906469811/kvarkar_mouth;pac3_cache/3906469811/kvarkar_eye_l;pac3_cache/3906469811/kvarkar_eye_r;pac3_cache/3906469811/kvarkar_dea_trousers;pac3_cache/3906469811/kvarkar_isd_blue_shirt;pac3_cache/3906469811/kvarkar_leather_gloves;pac3_cache/3906469811/kvarkar_hair;pac3_cache/3906469811/kvarkar_field_boots;pac3_cache/3906469811/kvarkar_field_trousers_clean;pac3_cache/3906469811/kvarkar_field_pocket;pac3_cache/3906469811/kvarkar_isd_leather_coat;pac3_cache/3906469811/kvarkar_isd_vest;pac3_cache/3906469811/kvarkar_black_tie;pac3_cache/3906469811/kvarkar_dea_shirt;pac3_cache/3906469811/kvarkar_leather_coat_fine;pac3_cache/3906469811/kvarkar_isd_back_emblem;pac3_cache/3906469811/kvarkar_dea_back_emblem",
+				["Materials"] = "pac3_cache/3751631672/kvarkar_face;pac3_cache/3751631672/kvarkar_mouth;pac3_cache/3751631672/kvarkar_eye_l;pac3_cache/3751631672/kvarkar_eye_r;pac3_cache/3751631672/kvarkar_dea_trousers;pac3_cache/3751631672/kvarkar_isd_blue_shirt;pac3_cache/3751631672/kvarkar_leather_gloves;pac3_cache/3751631672/kvarkar_hair;pac3_cache/3751631672/kvarkar_field_boots;pac3_cache/3751631672/kvarkar_field_trousers_clean;pac3_cache/3751631672/kvarkar_field_pocket;pac3_cache/3751631672/kvarkar_isd_leather_coat;pac3_cache/3751631672/kvarkar_isd_vest;pac3_cache/3751631672/kvarkar_black_tie;pac3_cache/3751631672/kvarkar_dea_shirt;pac3_cache/3751631672/kvarkar_leather_coat_fine;pac3_cache/3751631672/kvarkar_isd_leather_emboss;pac3_cache/3751631672/kvarkar_dea_leather_emboss",
 				["Name"] = "Character | Department colours and armour",
 				["ClassName"] = "model2",
 				["EyeTargetUID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
 				["ModelModifiers"] = "Department armour=0;Tie=0;Department insignia=0;skin=0;",
-				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_department_r6a.zip",
+				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_department_r7.zip",
+			},
+		},
+		[3] = {
+			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "model2",
+				["Position"] = Vector(17.192800521851, -98.510902404785, 0),
+				["UniqueID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
+				["Name"] = "Natural forward gaze",
+				["Hide"] = true,
+				["Model"] = "models/pac/default.mdl",
+				["Size"] = 0,
 			},
 		},
 		[4] = {
