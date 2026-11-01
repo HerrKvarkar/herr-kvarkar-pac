@@ -15,3 +15,5 @@ This is a personal PAC assembly and adaptation. It does not claim ownership of u
 - V2 field-trouser and boot source: mounted `models/player/cheddar/omega1/omega1_officer.mdl`, retargeted together to preserve their original ankle joins. Black trouser and leather glove/coat diffuse variants use the built-in image tool; source authors retain their rights.
 - V2 embossed External Affairs emblem: [user-provided DEA reference](https://postimg.cc/vcVFVVKV), incorporated as shallow geometry relief with the original leather UVs and skin weights.
 - Coat-tail procedural-bone setup was checked against [Valve's Source SDK jiggle-bone implementation](https://github.com/ValveSoftware/source-sdk-2013/blob/master/src/public/jigglebones.cpp).
+
+ISD scales-of-justice emblem: original image supplied through the user-linked [ISD roster](https://docs.google.com/spreadsheets/d/1uLWo99ymBUu331g9Cp41uwtpEi11X3tVsuxYWMBZ3gE/edit?gid=704543577), used unchanged as the alpha silhouette of the conforming back relief. No roster data is included.

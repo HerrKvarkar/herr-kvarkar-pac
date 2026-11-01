@@ -27,7 +27,8 @@
       "skin": 0,
       "bodygroups": {
         "Department armour": 1,
-        "Tie": 2
+        "Tie": 2,
+        "Department insignia": 1
       },
       "accessories": {
         "sunglasses": true,
@@ -35,7 +36,8 @@
         "ammo_pouches": false,
         "department_identification": "ISD"
       },
-      "tie_style": "tucked beneath armour"
+      "tie_style": "tucked beneath armour",
+      "emblem": "assets/isd_logo_reference.png"
     },
     "dea": {
       "display_name": "Herr Kvarkar | DEA",
@@ -48,14 +50,16 @@
       "skin": 1,
       "bodygroups": {
         "Department armour": 0,
-        "Tie": 1
+        "Tie": 1,
+        "Department insignia": 2
       },
       "accessories": {
         "sunglasses": true,
         "earpiece": true,
         "ammo_pouches": false,
         "department_identification": "DEA"
-      }
+      },
+      "emblem": "assets/dea_logo_reference.png"
     }
   }
 }

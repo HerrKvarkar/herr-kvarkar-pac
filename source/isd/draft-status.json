@@ -10,10 +10,12 @@
     [
       7.327777934074402,
       6.387837772369385,
-      62.23957061767578
+      62.63299994763522
     ]
   ],
+  "coatMatchedArmourVertices": 1788,
+  "emblemTriangles": 854,
   "independentArmourBodygroup": true,
-  "source": "G:\\ChatGPT\\kvarkar_pac_research\\isd_reference\\models\\frostbyte\\ia\\internalsecurity_mike.mdl",
+  "source": "models\\frostbyte\\ia\\internalsecurity_mike.mdl",
   "coatFitTested": false
 }

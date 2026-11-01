@@ -1,4 +1,4 @@
-$modelname "kvarkar/herr_kvarkar_isd_draft_r4.mdl"
+$modelname "kvarkar/herr_kvarkar_isd_draft_r6.mdl"
 $model "male_07" "kvarkar_animated_head.smd" {
     eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.350963 -3.212618 67.219699 "kvarkar_eye_r" 1 4 "iris_unused" 0.63
     eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.111237 -3.212613 67.164797 "kvarkar_eye_l" 1 -4 "iris_unused" 0.63
@@ -261,4 +261,10 @@ $bodygroup "Tie" {
 $texturegroup "Department colours" {
  { "kvarkar_isd_blue_shirt" "kvarkar_isd_leather_coat" }
  { "kvarkar_dea_shirt" "kvarkar_leather_coat_fine" }
+}
+
+$bodygroup "Department insignia" {
+ blank
+ studio "kvarkar_isd_back_emblem.smd"
+ studio "kvarkar_dea_back_emblem.smd"
 }

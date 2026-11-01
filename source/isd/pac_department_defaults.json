@@ -4,7 +4,8 @@
     "skin": 0,
     "bodygroups": {
       "Department armour": 1,
-      "Tie": 2
+      "Tie": 2,
+      "Department insignia": 1
     },
     "accessories": {
       "sunglasses": true,
@@ -18,7 +19,8 @@
     "skin": 1,
     "bodygroups": {
       "Department armour": 0,
-      "Tie": 1
+      "Tie": 1,
+      "Department insignia": 2
     },
     "accessories": {
       "sunglasses": true,
