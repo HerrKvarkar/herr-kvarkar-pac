@@ -82,38 +82,45 @@ def coat_front_y(x,z):
  normal/=max(np.linalg.norm(normal),1e-9)
  return ys[index],weights,normal
 raw=json.loads((OUT/'badge_native.json').read_text(encoding='utf-8'))
+card=[item for item in raw if item['material'].endswith('/badge_researcher')]
+points=np.array([item['pos'] for item in card]);old_center=(points.min(0)+points.max(0))/2.
+_,_,axes=np.linalg.svd(points-points.mean(0))
+old_n=axes[-1]
+if old_n[1]>0:old_n=-old_n
+def basis(normal):
+ right=np.cross(np.array([0.,0.,1.]),normal);right/=np.linalg.norm(right)
+ up=np.cross(normal,right);up/=np.linalg.norm(up)
+ return np.column_stack([right,up,normal])
+# Fit one plane to the breast panel. The card and clip stay rigid and rectangular.
+center_x=6.4;center_z=54.
+samples=[]
+for x in np.linspace(center_x-1.7,center_x+1.7,9):
+ for z in np.linspace(center_z-1.5,center_z+1.5,9):
+  hit=coat_front_y(x,z)
+  if hit is not None:samples.append([x,z,hit[0]])
+samples=np.array(samples)
+coeff=np.linalg.lstsq(np.column_stack([samples[:,0],samples[:,1],np.ones(len(samples))]),samples[:,2],rcond=None)[0]
+coeff[0]=.15;coeff[1]=.12
+coeff[2]=np.mean(samples[:,2]-coeff[0]*samples[:,0]-coeff[1]*samples[:,1])
+new_n=np.array([coeff[0],-1.,coeff[1]]);new_n/=np.linalg.norm(new_n)
+rotation=basis(new_n)@basis(old_n).T
+new_center=np.array([center_x,coeff@[center_x,center_z,1.],center_z])
+# Move the whole rigid plane just outside the convex cloth, never warp its corners.
+clearance=max(coeff@[x,z,1.]-y for x,z,y in samples)+.12
+new_center[1]-=clearance
 for i in range(0,len(raw),3):
  kind=raw[i]['material'].split('/')[-1];vertices=[]
  for item in raw[i:i+3]:
-  pos=np.array(item['pos'],dtype=float)
-  weights={names[link['name']]:link['weight'] for link in item['weights']};normal=np.array(item['normal'])
+  pos=np.array(item['pos'],dtype=float);normal=np.array(item['normal'])
   if kind!='lanyard':
-   pos[0]+=1.6
-   front=coat_front_y(pos[0],pos[2])
-   if front is not None:
-    pos[1]=front[0]-(.22 if kind=='clip' else .18)
-    weights=front[1];normal=front[2]
+   pos=rotation@(pos-old_center)+new_center
+   normal=rotation@normal
+   weights={names['ValveBiped.Bip01_Spine2']:1.}
   else:
-   # Retain the native neck loop; gently clear the broader shared shirt front.
    pos[1]-=.35*min(1.,max(0.,(-pos[1]-1.)/2.))
+   weights={names[link['name']]:link['weight'] for link in item['weights']}
   vertices.append({'p':pos,'n':normal,'uv':np.array(item['uv']),'weights':weights})
  (lanyard if kind=='lanyard' else badge).append(('kvarkar_rsd_id_'+kind+'.vmt',vertices))
-# Subdivide the card before conforming it, so a large triangle cannot cut
-# through the convex breast panel between its fitted corner vertices.
-fitted_badge=[]
-def fit_card(material,tri,depth=0):
- ps=np.array([v['p'] for v in tri])
- if material.endswith('badge_researcher.vmt') and max(np.ptp(ps[:,0]),np.ptp(ps[:,2]))>.3 and depth<6:
-  for child in scope['split_triangle'](tri):fit_card(material,child,depth+1)
-  return
- for v in tri:
-  hit=coat_front_y(v['p'][0],v['p'][2])
-  if hit is not None:
-   v['p'][1]=hit[0]-(.22 if material.endswith('clip.vmt') else .18)
-   v['weights']=hit[1];v['n']=hit[2]
- fitted_badge.append((material,tri))
-for material,tri in badge:fit_card(material,tri)
-badge=fitted_badge
 write_smd(OUT/'kvarkar_rsd_id_badge.smd',header,badge)
 write_smd(OUT/'kvarkar_rsd_lanyard.smd',header,lanyard)
 
@@ -170,7 +177,7 @@ costume=[(PROFILE['coat_material'] if mat=='kvarkar_leather_coat_fine.vmt' else 
 write_smd(OUT/'kvarkar_rsd_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
 qc=(REPO/'source/v2/kvarkar_animated.qc').read_text(encoding='utf-8')
-qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r11.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
+qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r13.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
 qc=qc.replace('$cdmaterials "models/kvarkar/v2/"','$cdmaterials "models/kvarkar/rsd/"\n$cdmaterials "models/kvarkar/v2/"')
 qc+='\n$bodygroup "Tie" {\n blank\n studio "kvarkar_optional_tie.smd"\n}\n'
 qc+='\n$bodygroup "Department insignia" {\n studio "kvarkar_plain_back_panel.smd"\n studio "kvarkar_rsd_emblem.smd"\n}\n'
