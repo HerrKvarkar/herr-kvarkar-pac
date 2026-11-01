@@ -313,6 +313,7 @@
 				["BoneMerge"] = true,
 				["ClassName"] = "model2",
 				["UniqueID"] = "f47df22bfddc88d1dec18a797b2f29bb0e304909f6c3c3e43b13a828d7a628a4",
+				["Notes"] = "Department accessory: toggle Hide to remove sunglasses.",
 				["Materials"] = "pac3_cache/1838716968/glasses_aviator;pac3_cache/1838716968/glasses_lens_aviator",
 				["Name"] = "Eyewear | Fitted aviator sunglasses",
 				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/kvarkar_aviators_v2.zip",
@@ -435,7 +436,7 @@
 			["self"] = {
 				["BoneMerge"] = true,
 				["UniqueID"] = "e753b006983d5eee3c3d16944efb711b56842e6b0ffa2b17dae99d6104705019",
-				["Notes"] = "Department colours: Skin 0 = ISD blue; Skin 1 = DEA red. Department armour: 0 off, 1 ISD Kevlar. Tie: 0 off, 1 full length, 2 tucked beneath armour. Equipment is grouped separately. Local preview only until approved.",
+				["Notes"] = "Department colours: Skin 0 = ISD blue; Skin 1 = DEA red. Department armour: 0 off, 1 ISD Kevlar. Tie: 0 off, 1 full length, 2 tucked beneath armour. Named accessories can be hidden independently.",
 				["Materials"] = "pac3_cache/4168308574/kvarkar_face;pac3_cache/4168308574/kvarkar_mouth;pac3_cache/4168308574/kvarkar_eye_l;pac3_cache/4168308574/kvarkar_eye_r;pac3_cache/4168308574/kvarkar_dea_trousers;pac3_cache/4168308574/kvarkar_isd_blue_shirt;pac3_cache/4168308574/kvarkar_leather_gloves;pac3_cache/4168308574/kvarkar_hair;pac3_cache/4168308574/kvarkar_field_boots;pac3_cache/4168308574/kvarkar_field_trousers_clean;pac3_cache/4168308574/kvarkar_field_pocket;pac3_cache/4168308574/kvarkar_isd_leather_coat;pac3_cache/4168308574/kvarkar_isd_vest;pac3_cache/4168308574/kvarkar_black_tie;pac3_cache/4168308574/kvarkar_dea_shirt;pac3_cache/4168308574/kvarkar_leather_coat_fine",
 				["Name"] = "Character | Department colours and armour",
 				["ClassName"] = "model2",

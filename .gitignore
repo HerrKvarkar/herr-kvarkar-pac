@@ -78,3 +78,10 @@
 
 !/herr_kvarkar_department_base.txt
 !/previews/isd-*.jpg
+
+!/herr_kvarkar_isd.txt
+!/pacs/
+!/pacs/herr_kvarkar/
+!/pacs/herr_kvarkar/*.txt
+!/pacs/herr_kvarkar/archive/
+!/pacs/herr_kvarkar/archive/*.txt
