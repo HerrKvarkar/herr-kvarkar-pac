@@ -62,77 +62,16 @@ write_smd(OUT/'kvarkar_rsd_pager.smd',header,pager)
 # The donor's Researcher ID clips onto the left chest; its lanyard is separate.
 # Fit the card to the outer coat rather than leave it inside the donor's shirt.
 badge=[];lanyard=[]
-coat=[tri for mat,tri in costume if mat=='kvarkar_leather_coat_fine.vmt']
-coat_points=np.array([[v['p'] for v in tri] for tri in coat])
-aa=coat_points[:,0];bb=coat_points[:,1];cc=coat_points[:,2]
-ab=bb[:,[0,2]]-aa[:,[0,2]];ac=cc[:,[0,2]]-aa[:,[0,2]]
-det=ab[:,0]*ac[:,1]-ab[:,1]*ac[:,0];safe=np.where(abs(det)>1e-9,det,1.)
-def coat_front_y(x,z):
- q=np.array([x,z])-aa[:,[0,2]]
- u=(q[:,0]*ac[:,1]-q[:,1]*ac[:,0])/safe;w=(ab[:,0]*q[:,1]-ab[:,1]*q[:,0])/safe
- valid=(abs(det)>1e-9)&(u>=-.001)&(w>=-.001)&(u+w<=1.001)
- ids=np.flatnonzero(valid)
- if not len(ids):return None
- ys=(1.-u-w)*aa[:,1]+u*bb[:,1]+w*cc[:,1]
- index=min(ids,key=lambda i:ys[i]);bary=[1.-u[index]-w[index],u[index],w[index]]
- weights={};normal=np.zeros(3)
- for v,factor in zip(coat[index],bary):
-  normal+=v['n']*factor
-  for bone,weight in v['weights'].items():weights[bone]=weights.get(bone,0.)+weight*max(0.,factor)
- normal/=max(np.linalg.norm(normal),1e-9)
- return ys[index],weights,normal
 raw=json.loads((OUT/'badge_native.json').read_text(encoding='utf-8'))
-card=[item for item in raw if item['material'].endswith('/badge_researcher')]
-points=np.array([item['pos'] for item in card]);old_center=(points.min(0)+points.max(0))/2.
-_,_,axes=np.linalg.svd(points-points.mean(0))
-old_n=axes[-1]
-if old_n[1]>0:old_n=-old_n
-def basis(normal):
- right=np.cross(np.array([0.,0.,1.]),normal);right/=np.linalg.norm(right)
- up=np.cross(normal,right);up/=np.linalg.norm(up)
- return np.column_stack([right,up,normal])
-# Anchor the original clip's rear jaw to the coat. Tilt the rigid card from
-# that mounting point until the breast panel clears its underside.
-center_x=6.4;center_z=54.
-clip_raw=np.array([item['pos'] for item in raw if item['material'].endswith('/clip')])
-card_samples=[]
-for i in range(0,len(card),3):
- a,b,c=[np.array(item['pos']) for item in card[i:i+3]]
- for j in range(5):
-  for k in range(5-j):card_samples.append(a*(1.-(j+k)/4.)+b*j/4.+c*k/4.)
-card_samples=np.array(card_samples)
-fit=None
-for slope in np.linspace(.05,1.75,69):
- new_n=np.array([.15,-1.,slope]);new_n/=np.linalg.norm(new_n)
- rotation=basis(new_n)@basis(old_n).T
- new_center=np.array([center_x,0.,center_z])
- clips=(rotation@(clip_raw-old_center).T).T+new_center
- rear=clips[np.argmax(clips[:,1])]
- mount=coat_front_y(rear[0],rear[2])
- if mount is None:continue
- new_center[1]=mount[0]+.02-rear[1]
- samples=(rotation@(card_samples-old_center).T).T+new_center
- gaps=[]
- for pos in samples:
-  hit=coat_front_y(pos[0],pos[2])
-  if hit is not None:gaps.append(hit[0]-pos[1])
- if gaps and min(gaps)>=.025:
-  fit=(rotation,new_center,mount[1],float(slope),min(gaps));break
-assert fit is not None,'No rigid badge fit clears the coat while keeping the clip attached'
-rotation,new_center,mount_weights,badge_slope,badge_clearance=fit
-print(json.dumps({'badgeSlope':badge_slope,'minimumCardClearance':badge_clearance,'clipRearEmbedded':.02}))
+# Preserve the donor's complete card/clip geometry, normals and skin weights.
+# Only translate the assembly onto the broader shared coat breast.
 for i in range(0,len(raw),3):
  kind=raw[i]['material'].split('/')[-1];vertices=[]
  for item in raw[i:i+3]:
-  pos=np.array(item['pos'],dtype=float);normal=np.array(item['normal'])
-  if kind!='lanyard':
-   pos=rotation@(pos-old_center)+new_center
-   normal=rotation@normal
-   weights=mount_weights.copy()
-  else:
-   pos[1]-=.35*min(1.,max(0.,(-pos[1]-1.)/2.))
-   weights={names[link['name']]:link['weight'] for link in item['weights']}
-  vertices.append({'p':pos,'n':normal,'uv':np.array(item['uv']),'weights':weights})
+  pos=np.array(item['pos'],dtype=float)
+  if kind!='lanyard':pos+=np.array([.8,-.7,0.])
+  else:pos[1]-=.35*min(1.,max(0.,(-pos[1]-1.)/2.))
+  vertices.append({'p':pos,'n':np.array(item['normal']),'uv':np.array(item['uv']),'weights':{names[link['name']]:link['weight'] for link in item['weights']}})
  (lanyard if kind=='lanyard' else badge).append(('kvarkar_rsd_id_'+kind+'.vmt',vertices))
 write_smd(OUT/'kvarkar_rsd_id_badge.smd',header,badge)
 write_smd(OUT/'kvarkar_rsd_lanyard.smd',header,lanyard)
@@ -190,7 +129,7 @@ costume=[(PROFILE['coat_material'] if mat=='kvarkar_leather_coat_fine.vmt' else 
 write_smd(OUT/'kvarkar_rsd_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
 qc=(REPO/'source/v2/kvarkar_animated.qc').read_text(encoding='utf-8')
-qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r15.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
+qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r16.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
 qc=qc.replace('$cdmaterials "models/kvarkar/v2/"','$cdmaterials "models/kvarkar/rsd/"\n$cdmaterials "models/kvarkar/v2/"')
 qc+='\n$bodygroup "Tie" {\n blank\n studio "kvarkar_optional_tie.smd"\n}\n'
 qc+='\n$bodygroup "Department insignia" {\n studio "kvarkar_plain_back_panel.smd"\n studio "kvarkar_rsd_emblem.smd"\n}\n'
