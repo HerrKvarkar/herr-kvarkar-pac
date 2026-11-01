@@ -13,7 +13,8 @@
       "earpiece"
     ],
     "player_size": 1,
-    "visual_scale": 1.0972222222222223
+    "visual_scale": 1.0972222222222223,
+    "running_animation": "server default; no PAC holdtype override"
   },
   "profiles": {
     "isd": {

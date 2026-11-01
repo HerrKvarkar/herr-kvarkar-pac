@@ -63,3 +63,6 @@ See [CREDITS.md](CREDITS.md) for upstream assets and [source/texture-generation.
 The ISD save includes the original roster emblem on the upper back. Upper straps and the vest back panel follow coat skin weights to maintain clearance during running. Standing and running front/side/back test renders were checked without changing the player camera.
 
 The worn ISD emblem is now a subtle 0.025-unit leather relief using the original coat UVs, grain and normal map, rather than a black alpha mark. The update was saved and all four server confirmations succeeded.
+
+
+All authored PAC saves now use the server’s normal running animations. The inherited `run_all_02` holdtype override and its sprint-event group were removed from department saves, legacy aliases and the V1 archive on 1 November 2026. The same override was removed from the currently worn outfit.

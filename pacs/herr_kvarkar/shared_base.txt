@@ -10,65 +10,6 @@
 									["children"] = {
 									},
 									["self"] = {
-										["Arguments"] = "keys;vwar_field_kit;first_aid_kit;vguns_cz75@@0",
-										["UniqueID"] = "947238527e027b7649ff434cf49222865ce6ef7bf13021f2299bbd6f2e329783",
-										["Operator"] = "equal",
-										["ClassName"] = "event",
-										["Event"] = "weapon_class",
-									},
-								},
-							},
-							["self"] = {
-								["Run"] = "run_all_02",
-								["ClassName"] = "holdtype",
-								["UniqueID"] = "e798589509229853c5c19928f3dc58130b41728dc80803de8cb5c803f47b3e1b",
-								["EditorExpand"] = true,
-							},
-						},
-					},
-					["self"] = {
-						["AffectChildrenOnly"] = true,
-						["ClassName"] = "event",
-						["UniqueID"] = "bc018483bc99f1e5689594c654d6e974e5d3fed9240331f31946e0cfb38a94aa",
-						["Arguments"] = "175",
-						["Event"] = "speed",
-						["Operator"] = "equal or above",
-						["Name"] = "speed equal or above400",
-						["EditorExpand"] = true,
-					},
-				},
-			},
-			["self"] = {
-				["EditorExpand"] = true,
-				["ClassTracker"] = "player",
-				["ClassName"] = "group",
-				["ModelTracker"] = "models/player/suits/male_04_open_tie.mdl",
-				["Name"] = "Sprint keys",
-				["UniqueID"] = "7921264ca19edecc715cef8bc670fd308ab5f19fb42245ffe120f84ec4689173",
-			},
-		},
-	},
-	["self"] = {
-		["ModelTracker"] = "models/player/suits/male_07_shirt_tie.mdl",
-		["ClassTracker"] = "player",
-		["cn_format"] = 1,
-		["UniqueID"] = "10bbf730a63c4836acacd1b480fc1731744cc26e982551daf8661e8d611c4ef3",
-		["Name"] = "Kvarkar | movement",
-		["ClassName"] = "group",
-	},
-},
-[2] = {
-	["children"] = {
-		[1] = {
-			["children"] = {
-				[1] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-								[1] = {
-									["children"] = {
-									},
-									["self"] = {
 										["UniqueID"] = "965e58d5bb47348148e60f9dbbe3800d24cb19b607058c91b0156d96a38e3f10",
 										["Bend"] = 0,
 										["Name"] = "Beam",
@@ -304,7 +245,7 @@
 		["ClassName"] = "group",
 	},
 },
-[3] = {
+[2] = {
 	["children"] = {
 		[1] = {
 			["children"] = {
@@ -329,7 +270,7 @@
 		["ClassName"] = "group",
 	},
 },
-[4] = {
+[3] = {
 	["children"] = {
 		[1] = {
 			["children"] = {

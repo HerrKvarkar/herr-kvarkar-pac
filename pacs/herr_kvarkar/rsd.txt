@@ -10,65 +10,6 @@
 									["children"] = {
 									},
 									["self"] = {
-										["Event"] = "weapon_class",
-										["UniqueID"] = "947238527e027b7649ff434cf49222865ce6ef7bf13021f2299bbd6f2e329783",
-										["Operator"] = "equal",
-										["Arguments"] = "keys;vwar_field_kit;first_aid_kit;vguns_cz75@@0",
-										["ClassName"] = "event",
-									},
-								},
-							},
-							["self"] = {
-								["Run"] = "run_all_02",
-								["ClassName"] = "holdtype",
-								["UniqueID"] = "e798589509229853c5c19928f3dc58130b41728dc80803de8cb5c803f47b3e1b",
-								["EditorExpand"] = true,
-							},
-						},
-					},
-					["self"] = {
-						["AffectChildrenOnly"] = true,
-						["ClassName"] = "event",
-						["UniqueID"] = "bc018483bc99f1e5689594c654d6e974e5d3fed9240331f31946e0cfb38a94aa",
-						["EditorExpand"] = true,
-						["Event"] = "speed",
-						["Operator"] = "equal or above",
-						["Name"] = "speed equal or above400",
-						["Arguments"] = "175",
-					},
-				},
-			},
-			["self"] = {
-				["EditorExpand"] = true,
-				["UniqueID"] = "7921264ca19edecc715cef8bc670fd308ab5f19fb42245ffe120f84ec4689173",
-				["ModelTracker"] = "models/player/suits/male_04_open_tie.mdl",
-				["ClassTracker"] = "player",
-				["Name"] = "Sprint keys",
-				["ClassName"] = "group",
-			},
-		},
-	},
-	["self"] = {
-		["ClassName"] = "group",
-		["ClassTracker"] = "player",
-		["cn_format"] = 1,
-		["ModelTracker"] = "models/player/suits/male_07_shirt_tie.mdl",
-		["Name"] = "Kvarkar | movement",
-		["UniqueID"] = "10bbf730a63c4836acacd1b480fc1731744cc26e982551daf8661e8d611c4ef3",
-	},
-},
-[2] = {
-	["children"] = {
-		[1] = {
-			["children"] = {
-				[1] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-								[1] = {
-									["children"] = {
-									},
-									["self"] = {
 										["Angles"] = Angle(0, -47.400001525879, 0),
 										["ClassName"] = "bone3",
 										["UniqueID"] = "1a5915a294de4b6154c7aa3b74348cbbc412164c2a504c4d400fe62406f90248",
@@ -305,7 +246,7 @@
 		["ClassTracker"] = "player",
 	},
 },
-[3] = {
+[2] = {
 	["children"] = {
 		[1] = {
 			["children"] = {
@@ -330,7 +271,7 @@
 		["UniqueID"] = "f967aa3b20b7fc28afd7c6459abaf31f082de5eaafdb93c449ef29d2e73b919d",
 	},
 },
-[4] = {
+[3] = {
 	["children"] = {
 		[1] = {
 			["children"] = {
