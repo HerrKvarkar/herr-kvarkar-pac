@@ -10,9 +10,9 @@ ISD was approved and worn on 1 November 2026. Both departments are organised in 
 The folder is `garrysmod/data/pac3/herr_kvarkar/` in the game and `pacs/herr_kvarkar/` in this repository. Load the desired outfit and choose Wear. Legacy names remain as compatible aliases. All four ISD roots were accepted by the server. The temporary preview camera has been removed from the game's separate VWAR camera registry.
 
 
-Select **Character | Department colours and armour** in PAC3. Skin 0 selects ISD blue; Skin 1 selects DEA red. **Department armour** is 0 off or 1 on. **Tie** is 0 off, 1 full length, or 2 tucked beneath armour. The current ISD save uses skin 0, armour 1 and tie 2. Eyewear, fitted earpiece and laser equipment have named parts that can be hidden independently. The editable profile definitions are in `department_profiles.json`.
+Select **Character | Department colours and armour** in PAC3. Skin 0 selects ISD blue; Skin 1 selects DEA red. **Department armour** is 0 off or 1 on. **Tie** is 0 off, 1 full length, or 2 tucked beneath armour. **Department insignia** is 0 off, 1 ISD scales-of-justice, or 2 DEA handshake. The current ISD save uses skin 0, armour 1 and tie 2. Eyewear, fitted earpiece and laser equipment have named parts that can be hidden independently. The editable profile definitions are in `department_profiles.json`.
 
-The hosted r4 preview pack is 14,631,681 bytes, below the verified 15 MiB PAC limit. Native client checks confirmed all 16 materials loaded, 61 facial controls, visible armour, revised collar/strap clearance and a 64-unit view offset. The shoulder straps and tucked tie were fitted in the running game; further pose-specific feedback can be addressed before approval. The DEA back emboss has been removed from this shared coat geometry.
+The hosted r6a pack is 15,348,343 bytes, below the verified 15 MiB PAC limit. Native client checks confirmed all 18 materials loaded, 61 facial controls, visible armour, revised collar/strap clearance and a 64-unit view offset. The shoulder straps and tucked tie were fitted in the running game; further pose-specific feedback can be addressed before approval. The DEA back emboss has been removed from this shared coat geometry.
 
 # Herr Kvarkar — V2
 
@@ -47,3 +47,5 @@ Client checks covered front/profile/rear views, the feet, shirt/coat overlap, co
 
 See [CREDITS.md](CREDITS.md) for upstream assets and [source/texture-generation.md](source/texture-generation.md) for the generated texture briefs. Upstream content retains its original authors' rights.
 
+
+The ISD save includes the original roster emblem on the upper back. Upper straps and the vest back panel follow coat skin weights to maintain clearance during running. Standing and running front/side/back test renders were checked without changing the player camera.

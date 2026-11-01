@@ -1,14 +1,22 @@
 {
   "worn": true,
-  "model": "models/pac3_cache/4168308574/model.mdl",
+  "model": "models/pac3_cache/3906469811/model.mdl",
   "viewOffset": 64,
   "tie": 2,
   "skin": 0,
   "flexes": 61,
-  "url": "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/isd-preview/assets/herr_kvarkar_department_preview_r4.zip",
-  "materials": 16,
+  "url": "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_department_r6a.zip",
+  "materials": 18,
   "armour": 1,
   "serverAcceptedRoots": 4,
   "cameraOverrideRemoved": true,
-  "approvedDate": "2026-11-01"
+  "approvedDate": "2026-11-01",
+  "insignia": 1,
+  "coatMatchedArmourVertices": 1788,
+  "emblemTriangles": 854,
+  "checkedPoses": [
+    "idle_all_01",
+    "run_all_01: .25 front, .75 side, .50 back"
+  ],
+  "cameraRegistryEntryRemoved": true
 }
