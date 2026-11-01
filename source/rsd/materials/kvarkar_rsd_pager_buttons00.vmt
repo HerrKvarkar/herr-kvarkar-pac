@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+ "$model" "1"
+ "$basetexture" "models/kvarkar/rsd/pager_button"
+ "$translucent" "1"
+}

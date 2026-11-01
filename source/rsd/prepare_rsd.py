@@ -55,10 +55,31 @@ for mat,tri in costume:
   for v in tri:
    x,y,z=v['p'];ease=max(0.,1.-abs(z-31.)/14.)
    ease*=1.-min(1.,sum(weight for bone,weight in v['weights'].items() if bone in scope['arm_bones']))
-   v['p'][0]=x*(1.+.12*ease)
-   v['p'][1]=.8+(y-.8)*(1.+.28*ease)
+   v['p'][0]=x*(1.+.03*ease)
+   v['p'][1]=.8+(y-.8)*(1.+.07*ease)
 tie=[(mat,tri) for mat,tri in costume if mat=='kvarkar_black_tie.vmt']
+# Use the existing atlas's grey woven tie rather than its almost-black first strip.
+for _,tri in tie:
+ for v in tri:
+  v['uv'][0]=.9165+v['uv'][0]*1.04
+  collar=min(1.,max(0.,(v['p'][2]-58.3)/2.))
+  center=max(0.,1.-abs(v['p'][0])/1.)
+  v['p'][1]+=(.65-.6*center)*collar
+  v['p'][0]*=1.-.16*collar
+  v['p'][2]-=.12*collar
+tie=[('kvarkar_rsd_charcoal_tie.vmt',tri) for _,tri in tie]
 write_smd(OUT/'kvarkar_optional_tie.smd',header,tie)
+# Original researcher pager, fitted to the shared belt and weighted to the pelvis.
+pager=[]
+raw=json.loads((OUT/'pager_native.json').read_text(encoding='utf-8'))
+names={name:bone for bone,(name,parent) in scope['nodes'].items()}
+for i in range(0,len(raw),3):
+ vertices=[]
+ for item in raw[i:i+3]:
+  pos=np.array(item['pos'],dtype=float)+np.array([.4,-.15,-2.])
+  vertices.append({'p':pos,'n':np.array(item['normal']),'uv':np.array(item['uv']),'weights':{names['ValveBiped.Bip01_Pelvis']:1.}})
+ pager.append(('kvarkar_rsd_pager_'+raw[i]['material'].split('/')[-1]+'.vmt',vertices))
+write_smd(OUT/'kvarkar_rsd_pager.smd',header,pager)
 costume=[(PROFILE['shirt_material'] if mat=='kvarkar_dea_shirt.vmt' else mat,tri) for mat,tri in costume if mat!='kvarkar_black_tie.vmt']
 panel=[];remaining=[]
 rect=[(0,-4.5,1),(0,4.5,-1),(2,50,1),(2,59,-1)]
@@ -112,9 +133,10 @@ costume=[(PROFILE['coat_material'] if mat=='kvarkar_leather_coat_fine.vmt' else 
 write_smd(OUT/'kvarkar_rsd_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
 qc=(REPO/'source/v2/kvarkar_animated.qc').read_text(encoding='utf-8')
-qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r4.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
+qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r6.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
 qc=qc.replace('$cdmaterials "models/kvarkar/v2/"','$cdmaterials "models/kvarkar/rsd/"\n$cdmaterials "models/kvarkar/v2/"')
 qc+='\n$bodygroup "Tie" {\n blank\n studio "kvarkar_optional_tie.smd"\n}\n'
 qc+='\n$bodygroup "Department insignia" {\n studio "kvarkar_plain_back_panel.smd"\n studio "kvarkar_rsd_emblem.smd"\n}\n'
+qc+='\n$bodygroup "Pager" {\n blank\n studio "kvarkar_rsd_pager.smd"\n}\n'
 (OUT/'kvarkar_rsd.qc').write_text('\n'.join(line.rstrip() for line in qc.splitlines())+'\n',encoding='utf-8')
 print(json.dumps({'costumeTriangles':len(costume),'emblemTriangles':len(emblem),'armour':False,'state':'not worn'}))

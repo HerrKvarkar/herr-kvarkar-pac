@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+ "$model" "1"
+ "$basetexture" "models/kvarkar/rsd/pager_plastic_base_color"
+ "$bumpmap" "models/kvarkar/rsd/pager_plastic_normal"
+ "$phong" "1"
+ "$phongboost" "0.3"
+ "$phongexponent" "12"
+}

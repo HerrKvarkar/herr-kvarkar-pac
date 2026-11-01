@@ -106,3 +106,8 @@
 !/assets/kvarkar_rsd_white_shirt.png
 !/assets/herr_kvarkar_rsd_preview_r4.zip
 !/previews/rsd-*.png
+
+!/assets/herr_kvarkar_rsd_preview_r6.zip
+
+!/source/rsd/pager_native.json
+!/source/rsd/materials/*.vtf

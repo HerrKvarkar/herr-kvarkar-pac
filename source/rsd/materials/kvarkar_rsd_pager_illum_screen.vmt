@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+ "$model" "1"
+ "$basetexture" "models/kvarkar/rsd/pager_digital"
+ "$selfillummask" "models/kvarkar/rsd/pager_digital"
+ "$selfillum" "1"
+}
