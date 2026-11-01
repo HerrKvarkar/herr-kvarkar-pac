@@ -34,29 +34,8 @@ scope={'__file__':str(shared_builder),'__name__':'kvarkar_shared_geometry'}
 exec(compile(prefix,str(shared_builder),'exec'),scope)
 costume=[(mat,tri) for mat,tri in costume if mat not in ('kvarkar_dea_emboss.vmt','kvarkar_leather_coat_fine.vmt')]
 costume += [('kvarkar_leather_coat_fine.vmt',tri) for mat,tri in scope['triangles'] if mat=='kvarkar_field_coat.vmt']
-# Blend the skirt into the upper thighs while retaining damped independent tails.
-# This lets the lab coat open with a stride instead of passing through raised knees.
-for mat,tri in costume:
- if mat=='kvarkar_leather_coat_fine.vmt':
-  for v in tri:
-   x,y,z=v['p']
-   if z>=42:continue
-   amount=min(1.,max(0.,(42-z)/12.))
-   amount=amount*amount*(3.-2.*amount)*(.85 if y<.8 else .75)
-   side='L' if x>0 else 'R'
-   thigh=next(b for b,(name,parent) in scope['nodes'].items() if name=='ValveBiped.Bip01_'+side+'_Thigh')
-   weights={b:w*(1.-amount) for b,w in v['weights'].items()}
-   weights[thigh]=weights.get(thigh,0.)+amount
-   v['weights']=weights
-# White cloth exposes small thigh intersections hidden by the old black leather.
-# Add a smooth lower-coat ease allowance without changing boots or tail skinning.
-for mat,tri in costume:
- if mat=='kvarkar_leather_coat_fine.vmt':
-  for v in tri:
-   x,y,z=v['p'];ease=max(0.,1.-abs(z-31.)/14.)
-   ease*=1.-min(1.,sum(weight for bone,weight in v['weights'].items() if bone in scope['arm_bones']))
-   v['p'][0]=x*(1.+.03*ease)
-   v['p'][1]=.8+(y-.8)*(1.+.07*ease)
+# Keep the shared DEA/ISD lower-coat geometry and damped tail weights unchanged.
+# Department variants must not add thigh pinning or inflate the skirt.
 tie=[(mat,tri) for mat,tri in costume if mat=='kvarkar_black_tie.vmt']
 # Use the existing atlas's grey woven tie rather than its almost-black first strip.
 for _,tri in tie:
@@ -133,7 +112,7 @@ costume=[(PROFILE['coat_material'] if mat=='kvarkar_leather_coat_fine.vmt' else 
 write_smd(OUT/'kvarkar_rsd_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
 qc=(REPO/'source/v2/kvarkar_animated.qc').read_text(encoding='utf-8')
-qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r6.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
+qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r7.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
 qc=qc.replace('$cdmaterials "models/kvarkar/v2/"','$cdmaterials "models/kvarkar/rsd/"\n$cdmaterials "models/kvarkar/v2/"')
 qc+='\n$bodygroup "Tie" {\n blank\n studio "kvarkar_optional_tie.smd"\n}\n'
 qc+='\n$bodygroup "Department insignia" {\n studio "kvarkar_plain_back_panel.smd"\n studio "kvarkar_rsd_emblem.smd"\n}\n'

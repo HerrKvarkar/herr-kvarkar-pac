@@ -1,4 +1,4 @@
-$modelname "kvarkar/herr_kvarkar_rsd_preview_r6.mdl"
+$modelname "kvarkar/herr_kvarkar_rsd_preview_r7.mdl"
 $model "male_07" "kvarkar_animated_head.smd" {
     eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.350963 -3.212618 67.219699 "kvarkar_eye_r" 1 4 "iris_unused" 0.63
     eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.111237 -3.212613 67.164797 "kvarkar_eye_l" 1 -4 "iris_unused" 0.63
