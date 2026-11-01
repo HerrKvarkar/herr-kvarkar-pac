@@ -23,7 +23,7 @@ for filename in ['suit_shirtx.vtf','kevlar_vest2.vtf']:
  with p.open('wb') as f:texture.save(f)
 # One shared normal map avoids ambiguous duplicate names in PAC's flattened cache.
 p=ISD/'kvarkar_isd_blue_shirt.vmt';s=p.read_text().replace('models/kvarkar/isd/suit_shirt_n','models/kvarkar/v2/suit_shirt_n');p.write_text(s)
-mdl=GAME/'models/kvarkar/herr_kvarkar_isd_draft_r3.mdl';d=mdl.read_bytes()
+mdl=GAME/'models/kvarkar/herr_kvarkar_isd_draft_r4.mdl';d=mdl.read_bytes()
 def cs(o):return d[o:d.index(0,o)].decode()
 nt,ot=struct.unpack_from('<ii',d,204);names=[cs(ot+i*64+struct.unpack_from('<i',d,ot+i*64)[0]) for i in range(nt)]
 files=set()
@@ -37,7 +37,7 @@ for name in names:
   files.add(texture)
 for source in mdl.parent.glob(mdl.stem+'.*'):
  dest=STAGE/'models/kvarkar'/source.name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,dest);files.add(dest)
-output=REPO/'assets/herr_kvarkar_department_preview_r3.zip'
+output=REPO/'assets/herr_kvarkar_department_preview_r4.zip'
 with zipfile.ZipFile(output,'w',zipfile.ZIP_STORED) as z:
  for p in sorted(files):z.write(p,p.relative_to(STAGE).as_posix())
 with zipfile.ZipFile(output) as z:

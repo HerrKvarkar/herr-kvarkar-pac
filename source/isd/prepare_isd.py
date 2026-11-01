@@ -50,6 +50,10 @@ for i in range(0,len(raw),3):
   pos=np.array(item['pos'],dtype=float);normal=np.array(item['normal'],dtype=float)
   pos[0]*=.93;pos[1]=.5+(pos[1]-.5)*.92
   if pos[1]<0:pos[1]-=.9*min(1,-pos[1]/2)
+  shoulder=min(1,max(0,(pos[2]-57)/3))*min(1,max(0,(abs(pos[0])-2.5)/1.5))
+  pos[0]*=1-.14*shoulder
+  if pos[1]<2.5:pos[1]+=.65*shoulder
+  pos[2]-=.15*shoulder
   weights={name_ids[link['name']]:link['weight'] for link in item['weights']}
   vertices.append({'p':pos,'n':normal,'uv':np.array(item['uv']),'weights':weights})
  vest.append(('kvarkar_isd_vest.vmt',vertices))
@@ -75,6 +79,9 @@ for mat,tri in tie:
  for vertex in tri:
   v={**vertex,'p':vertex['p'].copy(),'n':vertex['n'].copy(),'uv':vertex['uv'].copy(),'weights':vertex['weights'].copy()}
   v['p'][1]+=1.2*min(1,max(0,(59-v['p'][2])/2))
+  collar=min(1,max(0,(v['p'][2]-58)/2))
+  v['p'][1]+=.45*collar
+  v['p'][0]*=1-.15*collar
   vertices.append(v)
  tucked.append((mat,vertices))
 write_smd(OUT/'kvarkar_tie_tucked.smd',header,tucked)
@@ -89,7 +96,7 @@ for material,tri in costume:
 costume=[(PROFILE['coat_material'] if mat=='kvarkar_leather_coat_fine.vmt' else mat,tri) for mat,tri in costume]
 write_smd(OUT/'kvarkar_isd_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
-qc=(REPO/'source/v2/kvarkar_animated.qc').read_text();qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_isd_draft_r3.mdl').replace('"kvarkar_costume.smd"','"kvarkar_isd_costume.smd"')
+qc=(REPO/'source/v2/kvarkar_animated.qc').read_text();qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_isd_draft_r4.mdl').replace('"kvarkar_costume.smd"','"kvarkar_isd_costume.smd"')
 # An independent armour bodygroup keeps the shared character usable without armour.
 qc=qc.replace('$cdmaterials \"models/kvarkar/v2/\"','$cdmaterials \"models/kvarkar/isd/\"\n$cdmaterials \"models/kvarkar/v2/\"')
 qc+='\n$bodygroup "Department armour" {\n blank\n studio "kvarkar_isd_armour.smd"\n}\n'
