@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+ "$basetexture" "models/kvarkar/rsd/white_labcoat"
+ "$model" "1"
+ "$nocull" "1"
+ "$halflambert" "1"
+}

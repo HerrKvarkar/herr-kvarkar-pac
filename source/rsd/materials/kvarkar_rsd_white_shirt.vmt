@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+ "$basetexture" "models/kvarkar/rsd/white_shirt"
+ "$model" "1"
+ "$bumpmap" "models/kvarkar/v2/suit_shirt_n"
+ "$halflambert" "1"
+}

@@ -19,3 +19,6 @@ This is a personal PAC assembly and adaptation. It does not claim ownership of u
 ISD scales-of-justice emblem: original image supplied through the user-linked [ISD roster](https://docs.google.com/spreadsheets/d/1uLWo99ymBUu331g9Cp41uwtpEi11X3tVsuxYWMBZ3gE/edit?gid=704543577), used unchanged as the alpha silhouette of the conforming back relief. No roster data is included.
 
 ISD scales-of-justice emblem: original image from the user-supplied [ISD roster](https://docs.google.com/spreadsheets/d/1uLWo99ymBUu331g9Cp41uwtpEi11X3tVsuxYWMBZ3gE/edit?gid=704543577), used unchanged as the alpha silhouette of the conforming back relief. No roster data is included.
+
+
+RSD preview: the user supplied and confirmed the microscope emblem from the Site-65 Research roster. The current Sanctum researcher model (`models/sanctum/research/researcher/researcher_male_02.mdl`) was inspected in the client as a visual reference for the white coat and shirt; its mesh and textures are not included in the RSD runtime pack. The new white atlases are image_gen edits of the previously credited shared character materials. Upstream rights remain with their respective authors.

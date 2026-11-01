@@ -1,3 +1,15 @@
+## RSD researcher preview
+
+Load **PAC3 > Load > herr_kvarkar > rsd_preview** to review the separate white researcher variant. It has not been worn or sent to the server. The existing ISD and DEA saves are unchanged.
+
+The long coat and shirt are white, taking their colour and matte finish from the current `models/sanctum/research/researcher/researcher_male_02.mdl` researcher model. The shared face, platinum hair, opaque aviators, earpiece, leather gloves, trousers and boots are retained. There is no armour; the microscope emblem is a shallow same-cloth relief. The optional tie is bodygroup 2 (0 off, 1 on); the emblem is bodygroup 3 (0 plain, 1 RSD). The inherited laser equipment is disabled but remains available as a named optional group.
+
+RSD runtime content is a separate 12,516,807-byte pack so unused ISD armour/skins do not consume the server's 15 MiB budget. Character geometry remains one MDL with 61 facial controls. It uses the same visual scale and Size 1 camera-safe settings. `department_profiles.json` holds the RSD material and accessory defaults.
+
+Native offscreen front/back and running checks left the player camera unchanged. Extra lower-coat ease and partial thigh weighting improve the visible raised-knee intersection. **Known preview limitation:** a raised boot can still intersect the rear hem during a full running stride; the long coat has no physical leg collision. This preview needs fit review before approval.
+
+Build: `python source/rsd/prepare_rsd.py`, compile `source/rsd/kvarkar_rsd.qc` with the game's noninteractive `studiomdl.exe`, then `python source/rsd/package_rsd.py`. The scripts require the same Python dependencies as the shared build. New texture masters and generation briefs are documented in `source/texture-generation.md`. The supplied RSD microscope emblem is preserved from the user-confirmed roster image; no roster contents are published.
+
 # ISD and shared department base � local review
 
 ISD was approved and worn on 1 November 2026. Both departments are organised in **PAC3 > Load > herr_kvarkar**:

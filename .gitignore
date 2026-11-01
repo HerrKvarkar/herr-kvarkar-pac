@@ -92,3 +92,17 @@
 !/assets/herr_kvarkar_department_r6a.zip
 
 !/assets/herr_kvarkar_department_r7.zip
+
+!/source/rsd/
+/source/rsd/*
+!/source/rsd/*.py
+!/source/rsd/*.qc
+!/source/rsd/*.smd
+!/source/rsd/*.vta
+!/source/rsd/materials/
+!/source/rsd/materials/*.vmt
+!/assets/rsd_logo_reference.png
+!/assets/kvarkar_rsd_white_coat.png
+!/assets/kvarkar_rsd_white_shirt.png
+!/assets/herr_kvarkar_rsd_preview_r4.zip
+!/previews/rsd-*.png

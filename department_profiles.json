@@ -60,6 +60,28 @@
         "department_identification": "DEA"
       },
       "emblem": "assets/dea_logo_reference.png"
+    },
+    "rsd": {
+      "display_name": "Herr Kvarkar | RSD",
+      "shirt_material": "kvarkar_rsd_white_shirt.vmt",
+      "coat_material": "kvarkar_rsd_white_coat.vmt",
+      "coat_accent_master": "assets/kvarkar_rsd_white_coat.png",
+      "coat_accent_colour": "white researcher fabric, including exterior",
+      "tie": true,
+      "tie_style": "full tie; optional bodygroup",
+      "armour": null,
+      "skin": 0,
+      "bodygroups": {
+        "Tie": 1,
+        "Department insignia": 1
+      },
+      "emblem": "assets/rsd_logo_reference.png",
+      "accessories": {
+        "sunglasses": true,
+        "earpiece": true,
+        "ammo_pouches": false,
+        "department_identification": "RSD"
+      }
     }
   }
 }

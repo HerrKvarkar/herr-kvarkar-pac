@@ -23,3 +23,20 @@ Final glove prompt: preserve every finger silhouette, panel, stitch, padding sea
 Final trouser prompt: remove painted cargo pockets, pocket flaps, belts, belt loops and horizontal waist straps only from the large trouser islands; replace with uninterrupted deep-black heavy field fabric and fine twill, retaining soft folds and essential leg seams. Preserve the boots, soles, small pads and top-right stitched pad exactly, along with the 2:1 atlas layout. Outer-thigh pocket panels are fitted in mesh geometry instead of being painted on the front/inner legs.
 
 The supplied DEA logo's alpha silhouette is sampled directly into shallow relief on the upper back; its shape was not regenerated. New runtime diffuse textures use DXT5 encoding, with complete masters retained above.
+
+
+## RSD white researcher textures (1 November 2026)
+
+Mode: built-in image_gen edit, preserving existing UV layouts. The source masters remain unchanged. Both generated outputs were visually inspected before VTF encoding. Packaging resamples the coat to 1024x1024 and shirt to 1024x512 and encodes DXT1; the face texture is unchanged. The coat shader removes the coarse leather bump and reflective environment effect for a matte researcher finish.
+
+Coat output: `assets/kvarkar_rsd_white_coat.png`.
+Input: `assets/kvarkar_leather_coat_v2_fine.png`.
+Generated original: `C:/Users/twful/.codex/generated_images/01a19167-99db-7161-9852-a829ba4ef853/exec-b12ffaac-1182-4f44-ac74-a7a24ca4c2c0.png`.
+Prompt: Edit target: this square UV texture atlas for an existing 3D long coat. Produce EXACTLY the same layout, UV island locations, seams, pocket flaps, button positions and hardware. Convert ALL black leather cloth panels and ALL red accent patches into clean warm-neutral WHITE lab coat fabric, like an SCP researcher scientist coat. Very fine tight cotton twill weave, matte white with subtle light gray fold shading, white stitches, lightly worn seams. Remove large leather grain. Keep small black buttons/button holes dark and distinct at existing positions. Entire collar, body, sleeves, lining and accent islands white cloth. Do NOT draw a character, perspective mockup, logo, text or change the UV map. Flat texture atlas only. Preserve all borders and exact arrangement.
+
+Shirt output: `assets/kvarkar_rsd_white_shirt.png`.
+Input: `assets/kvarkar_dea_red_diffuse_final.png`.
+Generated original: `C:/Users/twful/.codex/generated_images/01a19167-99db-7161-9852-a829ba4ef853/exec-fcc483c0-9030-409e-b82b-eacc145a21c5.png`.
+Prompt: Edit this existing 3D character clothing UV texture atlas, exact same wide aspect ratio and UV island layout. Change ONLY red fabric regions into clean neutral WHITE cotton scientist shirt fabric with light grey natural fold shading and delicate weave. Preserve every collar, pocket, cuff, button seam and fold in exactly its current location. Keep all existing BLACK trousers on left, black belt and buckle, black tie and black shoe/inset islands on right absolutely unchanged. No red remains. No new text, logos or objects; flat texture atlas only. This is the same garment with a WHITE shirt instead of red. Exact layout preservation is critical.
+
+The RSD microscope emblem is the original user-confirmed PNG from the Research roster, stored at `assets/rsd_logo_reference.png`. The builder samples its alpha to form the selectable coat relief; it was not regenerated.
