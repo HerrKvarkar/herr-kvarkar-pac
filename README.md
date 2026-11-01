@@ -1,6 +1,6 @@
 ## Combat Medic
 
-The `combat_medic` variant was approved on 1 November 2026. Load **PAC3 > Load > herr_kvarkar > combat_medic**, then Wear after rejoining. The live save is mirrored at `pacs/herr_kvarkar/combat_medic.txt`; the workbench draft was removed.
+The `combat_medic` variant was approved and worn on 1 November 2026. All three server outfit submissions were accepted. Load **PAC3 > Load > herr_kvarkar > combat_medic**, then Wear after rejoining. The live save is mirrored at `pacs/herr_kvarkar/combat_medic.txt`; the workbench draft was removed.
 
 It retains Kvarkar's face, aviators, height, black trousers/boots and the approved loose ISD coat. The native Combat Medic plate carrier sits under the black leather coat, with dark red shirt/lining accents, the original blue glove meshes, and the supplied medical emblem embossed into the back. The medical pouch is off as requested. The covert earpiece and laser equipment are off. There is no tie, gasmask, balaclava or custom running override.
 

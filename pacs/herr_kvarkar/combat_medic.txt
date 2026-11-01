@@ -2,6 +2,173 @@
 	["children"] = {
 		[1] = {
 			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "entity2",
+				["UniqueID"] = "f4e10951a452f85338bd683d5ca557578cf999b95b3481cf5535a3327145381d",
+				["Model"] = "models/player/suits/male_07_shirt_tie.mdl",
+				["Name"] = "Kvarkar | height and hidden player base",
+				["NoDraw"] = true,
+				["Scale"] = Vector(1.0972222089767, 1.0972222089767, 1.0972222089767),
+			},
+		},
+		[2] = {
+			["children"] = {
+				[1] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["ClassName"] = "proxy",
+								["UniqueID"] = "8cc838257f19155eae950b105c7a472910807c85bf73871057fffe1d282d4f01",
+								["Expression"] = "clamp(voice_volume()*1.5,0,0.4)",
+								["Name"] = "Voice articulation",
+								["VariableName"] = "Weight",
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "flex",
+						["Weight"] = 0.00042223178024869,
+						["Flex"] = "left_part",
+						["Name"] = "Voice lip left_part",
+						["UniqueID"] = "9ee50d31d14e38211ec84730f7f5cea4f11f0c9c6715ecdfa7e792cba58f15f1",
+					},
+				},
+				[2] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["ClassName"] = "proxy",
+								["UniqueID"] = "0a76fbf9a3ee8b2931bbe2211f6773909cbc736adffec92b0f0e9e5435a2c536",
+								["Expression"] = "max(0,1-abs(sin(time()*0.65))*35)",
+								["Name"] = "Occasional blink",
+								["VariableName"] = "Weight",
+							},
+						},
+					},
+					["self"] = {
+						["Flex"] = "blink",
+						["ClassName"] = "flex",
+						["UniqueID"] = "4a254ec8a137f1a373566a7954e3673857ad1a6c6f5202a185389cd3c3cd4563",
+						["Name"] = "Natural blink",
+					},
+				},
+				[3] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["ClassName"] = "proxy",
+								["UniqueID"] = "f1a75fa201b2f924f2903ca52aaf213748fc0ecf109a8bcde6146edb6b9bcc62",
+								["Expression"] = "clamp(voice_volume()*3,0,0.65)",
+								["Name"] = "Follow voice volume",
+								["VariableName"] = "Weight",
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "flex",
+						["Weight"] = 0.00084446356049739,
+						["Flex"] = "jaw_drop",
+						["Name"] = "Voice jaw movement",
+						["UniqueID"] = "58dc591524458d9f7ddd6c574ea8640d9bbf87999cf5fce3d81ecbccea5893eb",
+					},
+				},
+				[4] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["ClassName"] = "proxy",
+								["UniqueID"] = "378084318fe9de3c15c049ceec72e657ed974ba8cb88b779948a99900e435aa6",
+								["Expression"] = "clamp(voice_volume()*1.5,0,0.4)",
+								["Name"] = "Voice articulation",
+								["VariableName"] = "Weight",
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "flex",
+						["Weight"] = 0.00042223178024869,
+						["Flex"] = "right_part",
+						["Name"] = "Voice lip right_part",
+						["UniqueID"] = "ae222cf69df377b8e056fa7bb8bfbc73b62297eeac1fb2c807bc4aea98def204",
+					},
+				},
+			},
+			["self"] = {
+				["BoneMerge"] = true,
+				["UniqueID"] = "e753b006983d5eee3c3d16944efb711b56842e6b0ffa2b17dae99d6104705019",
+				["Notes"] = "Combat Medic: blue gloves; medical armour; loose coat. Headgear: 0 normal hair, 1 helmet with tucked hair, 2 helmet and headset with tucked hair. Department armour and Department insignia: 0 off/1 on. Medical kit is off by default. No running animation override.",
+				["Materials"] = "pac3_cache/4230238336/kvarkar_face;pac3_cache/4230238336/kvarkar_mouth;pac3_cache/4230238336/kvarkar_eye_l;pac3_cache/4230238336/kvarkar_eye_r;pac3_cache/4230238336/kvarkar_dea_trousers;pac3_cache/4230238336/kvarkar_cm_shirt;pac3_cache/4230238336/kvarkar_field_boots;pac3_cache/4230238336/kvarkar_field_trousers_clean;pac3_cache/4230238336/kvarkar_field_pocket;pac3_cache/4230238336/kvarkar_leather_coat_fine;pac3_cache/4230238336/kvarkar_cm_blue_gloves;pac3_cache/4230238336/kvarkar_cm_vest;pac3_cache/4230238336/kvarkar_cm_fieldkit;pac3_cache/4230238336/kvarkar_hair;pac3_cache/4230238336/kvarkar_cm_helmet_shell;pac3_cache/4230238336/kvarkar_cm_helmet_rails;pac3_cache/4230238336/kvarkar_cm_helmet_mounts;pac3_cache/4230238336/kvarkar_cm_headset;pac3_cache/4230238336/kvarkar_cm_leather_emboss",
+				["Name"] = "Character | Combat Medic",
+				["ClassName"] = "model2",
+				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_combat_medic_r2.zip",
+				["ModelModifiers"] = "Department armour=1;Medical kit=0;Headgear=2;Department insignia=1;skin=0;",
+				["EyeTargetUID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
+			},
+		},
+		[3] = {
+			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "model2",
+				["Position"] = Vector(17.192800521851, -98.510902404785, 0),
+				["Size"] = 0,
+				["Model"] = "models/pac/default.mdl",
+				["Hide"] = true,
+				["Name"] = "Natural forward gaze",
+				["UniqueID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
+			},
+		},
+	},
+	["self"] = {
+		["ClassName"] = "group",
+		["ClassTracker"] = "player",
+		["cn_format"] = 1,
+		["ModelTracker"] = "models/player/suits/male_07_shirt_tie.mdl",
+		["Name"] = "Herr Kvarkar | Combat Medic",
+		["UniqueID"] = "a9da7eaa18884ea30c304b03a208acd3aefa480e7fbd4b3985e3f69c7d916135",
+	},
+},
+[2] = {
+	["children"] = {
+		[1] = {
+			["children"] = {
+				[1] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["UniqueID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
+								["AimPartUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
+								["Name"] = "Shoulder Target",
+								["EditorExpand"] = true,
+								["Size"] = 0,
+								["AngleOffset"] = Angle(70.900001525879, -5, -100),
+								["Position"] = Vector(-10.942000389099, 17.469329833984, -2.5390625),
+								["Bone"] = "pelvis",
+								["Model"] = "models/pac/default.mdl",
+								["ClassName"] = "model2",
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "a857f02dd9a199a619306d1ee0f29c96ef259b5a73e1a6a65b083ff6e3192972",
+						["FollowPartUID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
+						["Bone"] = "right upperarm",
+						["Name"] = "Shoulder",
+						["Angles"] = Angle(15, -69, 0),
+					},
+				},
 				[2] = {
 					["children"] = {
 						[1] = {
@@ -18,11 +185,11 @@
 								},
 							},
 							["self"] = {
-								["ClassName"] = "bone3",
+								["EditorExpand"] = true,
 								["UniqueID"] = "5b1d1c922175c4806e98406a72ccb6765d147e7eda05df8e66d2a0559e5c5423",
 								["Bone"] = "right finger 31",
-								["EditorExpand"] = true,
 								["Angles"] = Angle(0, -45.200000762939, 0),
+								["ClassName"] = "bone3",
 							},
 						},
 					},
@@ -31,49 +198,6 @@
 						["ClassName"] = "bone3",
 						["UniqueID"] = "5ba97d51efc742da343797bd648af635ec05680ffb47bab0dedecd336bb31793",
 						["Bone"] = "right finger 3",
-					},
-				},
-				[8] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-							},
-							["self"] = {
-								["UniqueID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
-								["AimPartUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
-								["Name"] = "Shoulder Target",
-								["ClassName"] = "model2",
-								["Size"] = 0,
-								["EditorExpand"] = true,
-								["Position"] = Vector(-10.942000389099, 17.469329833984, -2.5390625),
-								["Bone"] = "pelvis",
-								["Model"] = "models/pac/default.mdl",
-								["AngleOffset"] = Angle(70.900001525879, -5, -100),
-							},
-						},
-					},
-					["self"] = {
-						["ClassName"] = "bone3",
-						["UniqueID"] = "a857f02dd9a199a619306d1ee0f29c96ef259b5a73e1a6a65b083ff6e3192972",
-						["FollowPartUID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
-						["Bone"] = "right upperarm",
-						["Name"] = "Shoulder",
-						["Angles"] = Angle(15, -69, 0),
-					},
-				},
-				[5] = {
-					["children"] = {
-					},
-					["self"] = {
-						["UniqueID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
-						["Name"] = "Laser Target",
-						["Alpha"] = 0.5,
-						["ClassName"] = "model2",
-						["Size"] = 0.2,
-						["Brightness"] = 91.6,
-						["Bone"] = "hitpos",
-						["Model"] = "models/pac/default.mdl",
-						["Material"] = "red",
 					},
 				},
 				[3] = {
@@ -106,20 +230,7 @@
 						["Bone"] = "right finger 1",
 					},
 				},
-				[7] = {
-					["children"] = {
-					},
-					["self"] = {
-						["ClassName"] = "bone3",
-						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
-						["Angles"] = Angle(0, -69.300003051758, 0),
-						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
-						["Bone"] = "right forearm",
-						["Name"] = "Elbow",
-						["EditorExpand"] = true,
-					},
-				},
-				[1] = {
+				[4] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -130,14 +241,14 @@
 										["UniqueID"] = "965e58d5bb47348148e60f9dbbe3800d24cb19b607058c91b0156d96a38e3f10",
 										["Bend"] = 0,
 										["Name"] = "Beam",
-										["EditorExpand"] = true,
-										["Material"] = "red",
 										["EndPointUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
-										["Translucent"] = true,
-										["Width"] = 0.5,
-										["EndAlpha"] = 0.5,
-										["StartAlpha"] = 0.5,
 										["ClassName"] = "beam",
+										["Width"] = 0.5,
+										["EditorExpand"] = true,
+										["Translucent"] = true,
+										["Material"] = "red",
+										["StartAlpha"] = 0.5,
+										["EndAlpha"] = 0.5,
 									},
 								},
 							},
@@ -163,7 +274,7 @@
 						["Position"] = Vector(4.0999999046326, -0.69999998807907, -1.5),
 					},
 				},
-				[4] = {
+				[5] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -179,11 +290,11 @@
 								},
 							},
 							["self"] = {
-								["ClassName"] = "bone3",
+								["EditorExpand"] = true,
 								["UniqueID"] = "2326e266a5867bdd688454a838d745bf687198bf3d1a0dafd65e5844e4629b00",
 								["Bone"] = "right finger 21",
-								["EditorExpand"] = true,
 								["Angles"] = Angle(0, -75.199996948242, 0),
+								["ClassName"] = "bone3",
 							},
 						},
 					},
@@ -195,6 +306,34 @@
 					},
 				},
 				[6] = {
+					["children"] = {
+					},
+					["self"] = {
+						["UniqueID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
+						["Name"] = "Laser Target",
+						["Alpha"] = 0.5,
+						["ClassName"] = "model2",
+						["Size"] = 0.2,
+						["Brightness"] = 91.6,
+						["Bone"] = "hitpos",
+						["Model"] = "models/pac/default.mdl",
+						["Material"] = "red",
+					},
+				},
+				[7] = {
+					["children"] = {
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
+						["Angles"] = Angle(0, -69.300003051758, 0),
+						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
+						["Bone"] = "right forearm",
+						["Name"] = "Elbow",
+						["EditorExpand"] = true,
+					},
+				},
+				[8] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -210,11 +349,11 @@
 								},
 							},
 							["self"] = {
-								["ClassName"] = "bone3",
+								["EditorExpand"] = true,
 								["UniqueID"] = "2acf3a1db7d9072e33ce56010933052576044cfeda04b2afa541c04603d1e45a",
 								["Bone"] = "right finger 41",
-								["EditorExpand"] = true,
 								["Angles"] = Angle(0, -69.199996948242, 0),
+								["ClassName"] = "bone3",
 							},
 						},
 					},
@@ -237,16 +376,16 @@
 		},
 	},
 	["self"] = {
-		["ModelTracker"] = "models/player/suits/male_07_shirt_tie.mdl",
+		["ClassName"] = "group",
 		["UniqueID"] = "c9935fcf5aca025e2ff096003e44a969e87082864acda01dba58d8afbf1146c2",
 		["cn_format"] = 1,
-		["ClassName"] = "group",
+		["ModelTracker"] = "models/player/suits/male_07_shirt_tie.mdl",
 		["Hide"] = true,
 		["Name"] = "Equipment | Optional laser pointer (disabled)",
 		["ClassTracker"] = "player",
 	},
 },
-[2] = {
+[3] = {
 	["children"] = {
 		[1] = {
 			["children"] = {
@@ -263,152 +402,11 @@
 		},
 	},
 	["self"] = {
-		["ModelTracker"] = "models/player/suits/male_07_shirt_tie.mdl",
-		["UniqueID"] = "f967aa3b20b7fc28afd7c6459abaf31f082de5eaafdb93c449ef29d2e73b919d",
-		["cn_format"] = 1,
 		["ClassName"] = "group",
+		["ClassTracker"] = "player",
+		["cn_format"] = 1,
+		["ModelTracker"] = "models/player/suits/male_07_shirt_tie.mdl",
 		["Name"] = "Accessories | Department options",
-		["ClassTracker"] = "player",
-	},
-},
-[3] = {
-	["children"] = {
-		[1] = {
-			["children"] = {
-			},
-			["self"] = {
-				["ClassName"] = "entity2",
-				["UniqueID"] = "f4e10951a452f85338bd683d5ca557578cf999b95b3481cf5535a3327145381d",
-				["Model"] = "models/player/suits/male_07_shirt_tie.mdl",
-				["Name"] = "Kvarkar | height and hidden player base",
-				["NoDraw"] = true,
-				["Scale"] = Vector(1.0972222089767, 1.0972222089767, 1.0972222089767),
-			},
-		},
-		[2] = {
-			["children"] = {
-				[1] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-							},
-							["self"] = {
-								["ClassName"] = "proxy",
-								["UniqueID"] = "0a76fbf9a3ee8b2931bbe2211f6773909cbc736adffec92b0f0e9e5435a2c536",
-								["Expression"] = "max(0,1-abs(sin(time()*0.65))*35)",
-								["Name"] = "Occasional blink",
-								["VariableName"] = "Weight",
-							},
-						},
-					},
-					["self"] = {
-						["Flex"] = "blink",
-						["ClassName"] = "flex",
-						["UniqueID"] = "4a254ec8a137f1a373566a7954e3673857ad1a6c6f5202a185389cd3c3cd4563",
-						["Name"] = "Natural blink",
-					},
-				},
-				[4] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-							},
-							["self"] = {
-								["ClassName"] = "proxy",
-								["UniqueID"] = "8cc838257f19155eae950b105c7a472910807c85bf73871057fffe1d282d4f01",
-								["Expression"] = "clamp(voice_volume()*1.5,0,0.4)",
-								["Name"] = "Voice articulation",
-								["VariableName"] = "Weight",
-							},
-						},
-					},
-					["self"] = {
-						["ClassName"] = "flex",
-						["Weight"] = 0.0066857622005045,
-						["Flex"] = "left_part",
-						["Name"] = "Voice lip left_part",
-						["UniqueID"] = "9ee50d31d14e38211ec84730f7f5cea4f11f0c9c6715ecdfa7e792cba58f15f1",
-					},
-				},
-				[2] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-							},
-							["self"] = {
-								["ClassName"] = "proxy",
-								["UniqueID"] = "f1a75fa201b2f924f2903ca52aaf213748fc0ecf109a8bcde6146edb6b9bcc62",
-								["Expression"] = "clamp(voice_volume()*3,0,0.65)",
-								["Name"] = "Follow voice volume",
-								["VariableName"] = "Weight",
-							},
-						},
-					},
-					["self"] = {
-						["ClassName"] = "flex",
-						["Weight"] = 0.013371524401009,
-						["Flex"] = "jaw_drop",
-						["Name"] = "Voice jaw movement",
-						["UniqueID"] = "58dc591524458d9f7ddd6c574ea8640d9bbf87999cf5fce3d81ecbccea5893eb",
-					},
-				},
-				[3] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-							},
-							["self"] = {
-								["ClassName"] = "proxy",
-								["UniqueID"] = "378084318fe9de3c15c049ceec72e657ed974ba8cb88b779948a99900e435aa6",
-								["Expression"] = "clamp(voice_volume()*1.5,0,0.4)",
-								["Name"] = "Voice articulation",
-								["VariableName"] = "Weight",
-							},
-						},
-					},
-					["self"] = {
-						["ClassName"] = "flex",
-						["Weight"] = 0.0066857622005045,
-						["Flex"] = "right_part",
-						["Name"] = "Voice lip right_part",
-						["UniqueID"] = "ae222cf69df377b8e056fa7bb8bfbc73b62297eeac1fb2c807bc4aea98def204",
-					},
-				},
-			},
-			["self"] = {
-				["BoneMerge"] = true,
-				["Skin"] = 0,
-				["UniqueID"] = "e753b006983d5eee3c3d16944efb711b56842e6b0ffa2b17dae99d6104705019",
-				["Notes"] = "Combat Medic: blue gloves; medical armour; loose coat. Headgear: 0 normal hair, 1 helmet with tucked hair, 2 helmet and headset with tucked hair. Department armour and Department insignia: 0 off/1 on. Medical kit is off by default. No running animation override.",
-				["Materials"] = "",
-				["Name"] = "Character | Combat Medic",
-				["Material"] = "",
-				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_combat_medic_r2.zip",
-				["ModelModifiers"] = "Department armour=1;Medical kit=0;Headgear=2;Department insignia=1;skin=0;",
-				["EyeTargetUID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
-				["ClassName"] = "model2",
-			},
-		},
-		[3] = {
-			["children"] = {
-			},
-			["self"] = {
-				["ClassName"] = "model2",
-				["Position"] = Vector(17.192800521851, -98.510902404785, 0),
-				["Size"] = 0,
-				["Model"] = "models/pac/default.mdl",
-				["Hide"] = true,
-				["Name"] = "Natural forward gaze",
-				["UniqueID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
-			},
-		},
-	},
-	["self"] = {
-		["ModelTracker"] = "models/player/suits/male_07_shirt_tie.mdl",
-		["UniqueID"] = "a9da7eaa18884ea30c304b03a208acd3aefa480e7fbd4b3985e3f69c7d916135",
-		["cn_format"] = 1,
-		["ClassName"] = "group",
-		["Name"] = "Herr Kvarkar | Combat Medic",
-		["ClassTracker"] = "player",
+		["UniqueID"] = "f967aa3b20b7fc28afd7c6459abaf31f082de5eaafdb93c449ef29d2e73b919d",
 	},
 },
