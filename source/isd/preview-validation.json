@@ -1,11 +1,14 @@
 {
-	"worn": false,
-	"model": "models/pac3_cache/4168308574/model.mdl",
-	"viewOffset": 64,
-	"tie": 2,
-	"skin": 0,
-	"flexes": 61,
-	"url": "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/isd-preview/assets/herr_kvarkar_department_preview_r4.zip",
-	"materials": 16,
-	"armour": 1
+  "worn": true,
+  "model": "models/pac3_cache/4168308574/model.mdl",
+  "viewOffset": 64,
+  "tie": 2,
+  "skin": 0,
+  "flexes": 61,
+  "url": "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/isd-preview/assets/herr_kvarkar_department_preview_r4.zip",
+  "materials": 16,
+  "armour": 1,
+  "serverAcceptedRoots": 4,
+  "cameraOverrideRemoved": true,
+  "approvedDate": "2026-11-01"
 }
