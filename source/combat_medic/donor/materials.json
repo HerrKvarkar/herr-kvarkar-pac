@@ -1,0 +1,212 @@
+{
+	"helmet_rails": {
+		"textures": {
+			"$basetexture": {
+				"width": 512,
+				"source": "models/firstresponders/helmet_rails_col",
+				"file": "cm_helmet_rails_col.vtf",
+				"height": 512,
+				"bytes": 349760
+			},
+			"$lightwarptexture": {
+				"width": 256,
+				"source": "models/firstresponders/lightwarp_soft",
+				"file": "cm_lightwarp_soft.vtf",
+				"height": 16,
+				"bytes": 16525
+			},
+			"$bumpmap": {
+				"width": 512,
+				"source": "models/firstresponders/helmet_rails_nml",
+				"file": "cm_helmet_rails_nml.vtf",
+				"height": 512,
+				"bytes": 349760
+			},
+			"$phongexponenttexture": {
+				"width": 512,
+				"source": "models/firstresponders/helmet_rails_mask",
+				"file": "cm_helmet_rails_mask.vtf",
+				"height": 512,
+				"bytes": 349760
+			}
+		},
+		"shader": "VertexLitGeneric",
+		"source": "models/firstresponders/helmet_rails_col",
+		"vmt": "\"VertexlitGeneric\"\n{\n\t\"$basetexture\" \"models/firstresponders/helmet_rails_col\"\n\t\"$bumpmap\" \"models/firstresponders/helmet_rails_nml\"\n\t\"$color2\" \"[0.65 0.65 0.65]\"\n             //\"$selfillum\" \"1\"\n             //\"$selfillummaskscale\" \"15\"\n             //\"$selfillummask\" \"/chr_ying_main_emi\"\n\t\n\t\"$normalmapalphaenvmapmask\" \"1\"\t\t\t\t\n\t\"$envmap\" \"env_cubemap\"\t\t\t\t\t\t\t\n\t\"$envmapsaturation\" \"1\"\n\t\"$envmaptint\" \"[.025 .025 .025]\"\t\t\t\t\t\n \t\"$envmapFresnel\" \"1\"\t\t\t\t\t\n\n\t\"$nocull\" \"0\"\t\n\n             //\"ReflectionsDir\n\n\t\"$phong\" \"1\"\t\n\t\"$phongboost\" \"1\"\n\t\"$phongexponent\" \"12\"\t\n\t\"$phongexponenttexture\" \"models/firstresponders/helmet_rails_mask\"\n\n              //\"$phongwarptexture\" \"models/firstresponders/phongwarp2\"\t\t\n\t\"$lightwarptexture\" \"models/firstresponders/lightwarp_soft\"\n\n\n             //\"$PhongAlbedoTint\" \"1\"\n\t\"$rimlight\" \"1\"\n\t\"$rimlightboost\" \"0.05\"\n             //\"$rimmask\" \"1\"\n}"
+	},
+	"gloves": {
+		"textures": {
+			"$basetexture": {
+				"width": 1024,
+				"source": "models/humans/base_male/base_m_d",
+				"file": "cm_base_m_d.vtf",
+				"height": 1024,
+				"bytes": 1398336
+			},
+			"$lightwarptexture": {
+				"width": 256,
+				"source": "models/humans/base_male/base_m_caucasian_wrp",
+				"file": "cm_base_m_caucasian_wrp.vtf",
+				"height": 16,
+				"bytes": 16525
+			}
+		},
+		"shader": "VertexLitGeneric",
+		"source": "models/humans/base_male/base_m_d",
+		"vmt": "\"VertexLitGeneric\"\n{\n\t\"$baseTexture\" \"models\\humans\\base_male/base_m_d\"\n\t\"$bumpmap\" \"models\\humans\\base_male/base_m_n\"\n        \"$lightwarptexture\" \"models\\humans\\base_male\\Base_M_caucasian_wrp\"\n//        \"$lightwarptexture\" \"models\\humans\\base_male\\Base_M_african_wrp\"\n        $halflambert 0\n\t\"$nodecal\" \"1\"\n\t\"$model\" \"1\"\n\n// -- From here down is new stuff which will only be applied if $phong is set to 1 --\n        $phong 1\n        $phongboost \".4\"\n\t$phongexponenttexture \"models/humans/male_exponent\"\n        $phongtint \"[.85 .85 1]\"\n        $phongfresnelranges \"[.2 .5 5]\"\n\n// Rim lighting parameters\n\t\"$rimlight\" \"0\"\t\t\t\t// To enable rim lighting (requires phong)\n\t\"$rimlightexponent\" \"80\"             // Exponent for phong component of rim lighting\n\t\"$rimlightboost\" \".5\"\t               // Boost for ambient cube component of rim lighting\n}\n"
+	},
+	"uniform": {
+		"textures": {
+			"$basetexture": {
+				"width": 1024,
+				"source": "models/humans/uniform/medic_body_65",
+				"file": "cm_medic_body_65.vtf",
+				"height": 1024,
+				"bytes": 1398336
+			},
+			"$bumpmap": {
+				"width": 512,
+				"source": "models/humans/uniform/medic_body_65n",
+				"file": "cm_medic_body_65n.vtf",
+				"height": 512,
+				"bytes": 349760
+			}
+		},
+		"shader": "VertexLitGeneric",
+		"source": "models/humans/uniform/medic_body_65",
+		"vmt": "\"VertexLitGeneric\"\r\n{\r\n\t\"$baseTexture\" \"models\\humans\\uniform/medic_body_65\"\r\n        \"$bumpmap\" \"models\\humans\\uniform/medic_body_65n\"\r\n\r\n    \"$model\" 1\r\n\r\n    \"$normalmapalphaenvmapmask\" 1\r\n    \"$envmapcontrast\" 1\r\n    \"$phong\" \"1\"\r\n    \"$phongexponent\" \"1\"\r\n    \"$phongboost\" \"0.02\"    \r\n    \"$phongfresnelranges\"    \"[.1 0.2 1]\"\r\n    \"$halflambert\" \"1\"\r\n\r\n}\r\n"
+	},
+	"helmet_shell": {
+		"textures": {
+			"$basetexture": {
+				"width": 1024,
+				"source": "models/firstresponders/beta1_helmet2_col",
+				"file": "cm_beta1_helmet2_col.vtf",
+				"height": 1024,
+				"bytes": 1398336
+			},
+			"$lightwarptexture": {
+				"width": 256,
+				"source": "models/firstresponders/lightwarp_soft",
+				"file": "cm_lightwarp_soft.vtf",
+				"height": 16,
+				"bytes": 16525
+			}
+		},
+		"shader": "VertexLitGeneric",
+		"source": "models/firstresponders/beta1_helmet2_col",
+		"vmt": "\"VertexlitGeneric\"\n{\n\t\"$basetexture\" \"models/firstresponders/beta1_helmet2_col\"\n\t\"$color2\" \"[0.75 0.75 0.75]\"\n             //\"$selfillum\" \"1\"\n             //\"$selfillummaskscale\" \"15\"\n             //\"$selfillummask\" \"/chr_ying_main_emi\"\n\t\n\t\"$normalmapalphaenvmapmask\" \"1\"\t\t\t\t\n\t\"$envmap\" \"env_cubemap\"\t\t\t\t\t\t\t\n\t\"$envmapsaturation\" \"1\"\n\t\"$envmaptint\" \"[.025 .025 .025]\"\t\t\t\t\t\n \t\"$envmapFresnel\" \"1\"\t\t\t\t\t\n\n\t\"$nocull\" \"0\"\t\n\n             //\"ReflectionsDir\n\n\t\"$phong\" \"1\"\t\n\t\"$phongboost\" \"0.1\"\n\t\"$phongexponent\" \"8\"\t\n\t\"$phongexponenttexture\" \"models/firstresponders/helmet_mask\"\n\n             //\"$phongwarptexture\" \"models/firstresponders/phongwarp2\"\t\t\n\t\"$lightwarptexture\" \"models/firstresponders/lightwarp_soft\"\n\t\"$phongtint\" \"[1 1 .9]\"\n\t\"$phongfresnelranges\" \"[.2 .5 5]\"\n\n             //\"$PhongAlbedoTint\" \"1\"\n\t\"$rimlight\" \"1\"\n\t\"$rimlightboost\" \"0.35\"\n             //\"$rimmask\" \"1\"\n}"
+	},
+	"helmet_mounts": {
+		"textures": {
+			"$lightwarptexture": {
+				"width": 256,
+				"source": "models/firstresponders/lightwarp_soft",
+				"file": "cm_lightwarp_soft.vtf",
+				"height": 16,
+				"bytes": 16525
+			},
+			"$basetexture": {
+				"width": 1024,
+				"source": "models/firstresponders/headgear_c_col",
+				"file": "cm_headgear_c_col.vtf",
+				"height": 1024,
+				"bytes": 699272
+			},
+			"$bumpmap": {
+				"width": 1024,
+				"source": "models/firstresponders/headgear_c_nml",
+				"file": "cm_headgear_c_nml.vtf",
+				"height": 1024,
+				"bytes": 699272
+			}
+		},
+		"shader": "VertexLitGeneric",
+		"source": "models/firstresponders/headgear_c_col",
+		"vmt": "\"VertexlitGeneric\"\n{\n\t\"$basetexture\" \"models/firstresponders/headgear_c_col\"\n\t\"$bumpmap\" \"models/firstresponders/headgear_c_nml\"\n             //\"$color2\" \"[0.75 0.75 0.75]\"\n             //\"$selfillum\" \"1\"\n             //\"$selfillummaskscale\" \"15\"\n             //\"$selfillummask\" \"/chr_ying_main_emi\"\n\t\n\t\"$normalmapalphaenvmapmask\" \"1\"\t\t\t\t\n\t\"$envmap\" \"env_cubemap\"\t\t\t\t\t\t\t\n\t\"$envmapsaturation\" \"1\"\n\t\"$envmaptint\" \"[.015 .015 .015]\"\t\t\t\t\t\n \t\"$envmapFresnel\" \"1\"\t\t\t\t\t\n\n\t\"$nocull\" \"0\"\t\n\n             //\"ReflectionsDir\n\n\t\"$phong\" \"1\"\t\n\t\"$phongboost\" \"0.25\"\n             //\"$phongexponent\" \"8\"\t\n\t\"$phongexponenttexture\" \"models/firstresponders/upperbody_a_mask\"\n\n             //\"$phongwarptexture\" \"models/firstresponders/phongwarp2\"\t\t\n\t\"$lightwarptexture\" \"models/firstresponders/lightwarp_soft\"\n\t\"$phongtint\" \"[1 1 .9]\"\n\t\"$phongfresnelranges\" \"[.2 .5 5]\"\n\n             //\"$PhongAlbedoTint\" \"1\"\n\t\"$rimlight\" \"1\"\n\t\"$rimlightboost\" \"0.35\"\n             //\"$rimmask\" \"1\"\n}"
+	},
+	"headset": {
+		"textures": {
+			"$lightwarptexture": {
+				"width": 256,
+				"source": "models/firstresponders/lightwarp_soft",
+				"file": "cm_lightwarp_soft.vtf",
+				"height": 16,
+				"bytes": 16525
+			},
+			"$basetexture": {
+				"width": 512,
+				"source": "models/firstresponders/rac_headset_col",
+				"file": "cm_rac_headset_col.vtf",
+				"height": 512,
+				"bytes": 349760
+			},
+			"$bumpmap": {
+				"width": 512,
+				"source": "models/firstresponders/rac_headset_nml",
+				"file": "cm_rac_headset_nml.vtf",
+				"height": 512,
+				"bytes": 349760
+			}
+		},
+		"shader": "VertexLitGeneric",
+		"source": "models/firstresponders/rac_headset_col",
+		"vmt": "\"VertexlitGeneric\"\n{\n\t\"$basetexture\" \"models/firstresponders/rac_headset_col\"\n\t\"$bumpmap\" \"models/firstresponders/rac_headset_nml\"\n$nocull 1\n$model 1\t\n\"$blendTintByBaseAlpha\"\t\"1\"\n\"$PhongDisableHalfLambert\" \"1\"\n\n\n\t//TRANSPARENCY AND AO:\n\n\n\t$lightwarptexture \"models/firstresponders/lightwarp_soft\"\n\n\n\t\"$rimlight\" \"1\"\n\t\"$rimlightboost\" \"0.35\"\n\n\t//IMPORTANT:\n\n\t\"$phong\" \"1\"\t\t\t\t\t\t\n\t\"$phongboost\"\t\"0.55\" \t\t\n\t\"$phongexponenttexture\" \"models/firstresponders/phongwarp_sheen\" \n\n}\n\n"
+	},
+	"fieldkit": {
+		"textures": {
+			"$lightwarptexture": {
+				"width": 256,
+				"source": "models/firstresponders/lightwarp_soft",
+				"file": "cm_lightwarp_soft.vtf",
+				"height": 16,
+				"bytes": 16525
+			},
+			"$basetexture": {
+				"width": 512,
+				"source": "models/firstresponders/combatmedic_fieldkit",
+				"file": "cm_combatmedic_fieldkit.vtf",
+				"height": 512,
+				"bytes": 349760
+			},
+			"$bumpmap": {
+				"width": 512,
+				"source": "models/firstresponders/combatmedic_fieldkit_nml",
+				"file": "cm_combatmedic_fieldkit_nml.vtf",
+				"height": 512,
+				"bytes": 349784
+			}
+		},
+		"shader": "VertexLitGeneric",
+		"source": "models/firstresponders/combatmedic_fieldkit",
+		"vmt": "\"VertexlitGeneric\"\n{\n\t\"$basetexture\" \"models/firstresponders/combatmedic_fieldkit\"\n\t\"$bumpmap\" \"models/firstresponders/combatmedic_fieldkit_nml\"\n\t\"$color2\" \"[0.85 0.85 0.85]\"\n             //\"$selfillum\" \"1\"\n             //\"$selfillummaskscale\" \"15\"\n             //\"$selfillummask\" \"/chr_ying_main_emi\"\n\t\n\t\"$normalmapalphaenvmapmask\" \"1\"\t\t\t\t\n\t\"$envmap\" \"env_cubemap\"\t\t\t\t\t\t\t\n\t\"$envmapsaturation\" \"1\"\n\t\"$envmaptint\" \"[.025 .025 .025]\"\t\t\t\t\t\n \t\"$envmapFresnel\" \"1\"\t\t\t\t\t\n\n\t\"$nocull\" \"0\"\t\n\n             //\"ReflectionsDir\n\n\t\"$phong\" \"1\"\t\n\t\"$phongboost\" \"0.65\"\n\t\"$phongexponent\" \"5\"\t\n\t\"$phongexponenttexture\" \"models/firstresponders/upperbody_a_mask\"\n\n             //\"$phongwarptexture\" \"models/firstresponders/phongwarp2\"\t\t\n\t\"$lightwarptexture\" \"models/firstresponders/lightwarp_soft\"\n\t\"$phongtint\" \"[1 1 .9]\"\n\t\"$phongfresnelranges\" \"[.2 .5 5]\"\n\n             //\"$PhongAlbedoTint\" \"1\"\n\t\"$rimlight\" \"1\"\n\t\"$rimlightboost\" \"0.35\"\n             //\"$rimmask\" \"1\"\n}"
+	},
+	"vest": {
+		"textures": {
+			"$basetexture": {
+				"width": 2048,
+				"source": "models/firstresponders/106vest",
+				"file": "cm_106vest.vtf",
+				"height": 2048,
+				"bytes": 2796424
+			},
+			"$bumpmap": {
+				"width": 1024,
+				"source": "models/firstresponders/nvest",
+				"file": "cm_nvest.vtf",
+				"height": 1024,
+				"bytes": 1398336
+			},
+			"$phongexponenttexture": {
+				"width": 2,
+				"source": "models/firstresponders/green",
+				"file": "cm_green.vtf",
+				"height": 2,
+				"bytes": 104
+			}
+		},
+		"shader": "VertexLitGeneric",
+		"source": "models/firstresponders/combatmedic65_vest",
+		"vmt": "\"VertexlitGeneric\"\n{\n\t\"$basetexture\" \"models/firstresponders/106vest\"\n\t\"$bumpmap\" \"models/firstresponders/nvest\"\n\t\"$phong\" 1\n\t\"$phongboost\" \"1.5\"\n\t\"$phongalbedotint\" \"1\"\n\t\"$phongexponent\"\t\"5\"\n\t\"$phongtint\"\t\"[0.05 0.05 0.05]\"\n                \"$nocull\" \"1\"\n\n\n\n\t\"$phongfresnelranges\"\t\"[0.3 1 4]\"\n\t\"$phongdisablehalflambert\" \"1\"\n\t\"$phongexponenttexture\" \"models/firstresponders/green\"\n}\n"
+	}
+}

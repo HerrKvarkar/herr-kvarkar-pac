@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+ "$model" "1"
+ "$halflambert" "1"
+ "$phong" "1"
+ "$phongexponent" "18"
+ "$phongboost" "0.22"
+ "$basetexture" "models/kvarkar/combat_medic/cm_helmet_rails_col"
+ "$lightwarptexture" "models/kvarkar/combat_medic/cm_lightwarp_soft"
+ "$bumpmap" "models/kvarkar/combat_medic/cm_helmet_rails_nml"
+ "$phongexponenttexture" "models/kvarkar/combat_medic/cm_helmet_rails_mask"
+}

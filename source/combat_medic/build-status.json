@@ -1,0 +1,13 @@
+{
+  "costumeTriangles": 8630,
+  "vestTriangles": 2718,
+  "kitTriangles": 440,
+  "helmetTriangles": 5789,
+  "headsetTriangles": 4474,
+  "blueGloveTriangles": 1140,
+  "tuckedHairVertices": 2843,
+  "maxCrownTuck": 1.7222483770922659,
+  "matchedArmourVertices": 6572,
+  "emblemTriangles": 6563,
+  "customRunningOverride": false
+}

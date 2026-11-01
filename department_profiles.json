@@ -90,6 +90,41 @@
         "lanyard": false
       },
       "tie_material": "kvarkar_rsd_charcoal_tie.vmt"
+    },
+    "combat_medic": {
+      "display_name": "Herr Kvarkar | Combat Medic",
+      "status": "approved",
+      "save_file": "pacs/herr_kvarkar/combat_medic.txt",
+      "model_asset": "assets/herr_kvarkar_combat_medic_r2.zip",
+      "shirt_material": "kvarkar_cm_shirt.vmt",
+      "coat_material": "kvarkar_leather_coat_fine.vmt",
+      "coat_accent_master": "assets/kvarkar_leather_coat_v2_fine.png",
+      "coat_accent_colour": "medical dark red",
+      "gloves_material": "kvarkar_cm_blue_gloves.vmt",
+      "gloves_source": "original combat medic blue glove meshes and hand atlas",
+      "armour": "native combat medic plate carrier, fitted under coat",
+      "tie": false,
+      "skin": 0,
+      "bodygroups": {
+        "Department armour": 1,
+        "Medical kit": 0,
+        "Headgear": 2,
+        "Department insignia": 1
+      },
+      "headgear_options": {
+        "0": "normal platinum hair, no helmet",
+        "1": "native helmet with tucked hair",
+        "2": "native helmet and headset with tucked hair"
+      },
+      "emblem": "assets/medical_logo_reference.png",
+      "accessories": {
+        "sunglasses": true,
+        "earpiece": false,
+        "medical_pouch": false,
+        "laser_pointer": false,
+        "department_identification": "Combat Medic"
+      },
+      "running_animation": "server default; no PAC override"
     }
   }
 }

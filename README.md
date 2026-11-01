@@ -1,3 +1,24 @@
+## Combat Medic
+
+The `combat_medic` variant was approved on 1 November 2026. Load **PAC3 > Load > herr_kvarkar > combat_medic**, then Wear after rejoining. The live save is mirrored at `pacs/herr_kvarkar/combat_medic.txt`; the workbench draft was removed.
+
+It retains Kvarkar's face, aviators, height, black trousers/boots and the approved loose ISD coat. The native Combat Medic plate carrier sits under the black leather coat, with dark red shirt/lining accents, the original blue glove meshes, and the supplied medical emblem embossed into the back. The medical pouch is off as requested. The covert earpiece and laser equipment are off. There is no tie, gasmask, balaclava or custom running override.
+
+The character, gloves, armour and all headgear choices are one compiled MDL. Select **Character | Combat Medic** and edit these bodygroups through Model Modifiers:
+
+| Control | Values |
+| --- | --- |
+| Headgear | 0: normal platinum hair; 1: helmet with tucked hair; 2: helmet, headset and tucked hair (default) |
+| Department armour | 0 off; 1 on (default) |
+| Department insignia | 0 plain back; 1 medical emboss (default) |
+| Medical kit | 0 off (default); 1 optional native pouch |
+
+The helmet variants tuck only the crown under the shell; the original normal hairstyle and hair below the helmet rim remain unchanged. The lower coat mesh, skin weights and damped tail settings match the approved ISD source. The supplied face texture and hair colour/alpha texture are byte-identical to the approved base. Native review covered standing and running front/side views, helmet clearance and the normal-hair option. All 19 materials load and all 61 facial controls remain present. Review renders use separate offscreen models and leave the player camera unchanged.
+
+Runtime pack: `assets/herr_kvarkar_combat_medic_r2.zip`, **15,325,118 bytes**, below the verified 15 MiB server limit. Opaque equipment diffuse textures use DXT1; smaller hardware normal/mask maps and the hair normal map are resized to fit the budget. The face and hair colour/alpha are preserved. The profile and defaults are in `department_profiles.json`.
+
+Build with `python source/combat_medic/build_combat_medic.py`, compile `source/combat_medic/kvarkar_combat_medic.qc` using the game's noninteractive `studiomdl.exe`, then run `python source/combat_medic/package_combat_medic.py`. The source uses the approved ISD coat cutout plus native donor meshes/materials stored under `source/combat_medic/`. No model viewer is required.
+
 ## RSD researcher variant
 
 RSD was approved, saved and worn on 1 November 2026. Load **PAC3 > Load > herr_kvarkar > rsd** after rejoining, then choose Wear. All four server confirmations succeeded. The PAC folder contains the approved department saves and shared base; the RSD preview alias has been removed.

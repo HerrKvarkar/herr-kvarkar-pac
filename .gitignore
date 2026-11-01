@@ -122,3 +122,19 @@
 !/assets/herr_kvarkar_rsd_preview_r15.zip
 
 !/assets/herr_kvarkar_rsd_preview_r16.zip
+
+!/source/combat_medic/
+/source/combat_medic/*
+!/source/combat_medic/*.py
+!/source/combat_medic/*.json
+!/source/combat_medic/*.smd
+!/source/combat_medic/*.vta
+!/source/combat_medic/*.qc
+!/source/combat_medic/donor/
+!/source/combat_medic/donor/*.json
+!/source/combat_medic/materials/
+!/source/combat_medic/materials/*.vmt
+!/source/combat_medic/materials/*.vtf
+!/assets/medical_logo_reference.png
+!/assets/herr_kvarkar_combat_medic_r2.zip
+!/previews/combat-medic-*.png

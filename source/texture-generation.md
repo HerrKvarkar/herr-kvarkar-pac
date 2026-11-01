@@ -40,3 +40,10 @@ Generated original: `C:/Users/twful/.codex/generated_images/01a19167-99db-7161-9
 Prompt: Edit this existing 3D character clothing UV texture atlas, exact same wide aspect ratio and UV island layout. Change ONLY red fabric regions into clean neutral WHITE cotton scientist shirt fabric with light grey natural fold shading and delicate weave. Preserve every collar, pocket, cuff, button seam and fold in exactly its current location. Keep all existing BLACK trousers on left, black belt and buckle, black tie and black shoe/inset islands on right absolutely unchanged. No red remains. No new text, logos or objects; flat texture atlas only. This is the same garment with a WHITE shirt instead of red. Exact layout preservation is critical.
 
 The RSD microscope emblem is the original user-confirmed PNG from the Research roster, stored at `assets/rsd_logo_reference.png`. The builder samples its alpha to form the selectable coat relief; it was not regenerated.
+
+
+## Combat Medic native materials (1 November 2026)
+
+No image generation or semantic recolouring was used for this variant. Native Combat Medic equipment textures are retained from the mounted donor model. The blue glove mesh is extracted from the donor's skinned head/hand submodel, preserving its normals and bone links. The native hand atlas's top-right 512x512 quadrant is cropped without repainting, and glove UVs are remapped into that quadrant. `cm_blue_gloves.vtf` therefore contains the original blue glove pixels. The existing red shirt gets a separate editable `$color2 [0.65 0.65 0.65]` material; the black leather coat/red lining source is shared with DEA.
+
+The package resizes selected normal/mask maps and encodes opaque equipment diffuse maps as DXT1 to meet the PAC per-file limit. The full face texture and existing hair colour/alpha texture are byte-identical to the approved V2 base. The helmet-specific tucked crown is a geometry variant selected alongside the helmet, rather than a painted hair texture. The original supplied medical PNG alpha drives the same shallow coat emboss technique as ISD/DEA.

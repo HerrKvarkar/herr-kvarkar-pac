@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+ "$model" "1"
+ "$halflambert" "1"
+ "$phong" "1"
+ "$phongexponent" "18"
+ "$phongboost" "0.22"
+ "$lightwarptexture" "models/kvarkar/combat_medic/cm_lightwarp_soft"
+ "$basetexture" "models/kvarkar/combat_medic/cm_rac_headset_col"
+ "$bumpmap" "models/kvarkar/combat_medic/cm_rac_headset_nml"
+ "$nocull" "1"
+}
