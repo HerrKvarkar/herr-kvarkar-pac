@@ -18,7 +18,7 @@ for filename in ['suit_shirtx.vtf','kevlar_vest2.vtf']:
  p=ISD/filename
  with p.open('rb') as f:
   source=VTF.read(f);pixels=source.get().to_PIL().convert('RGBA').resize((1024,512),Image.Resampling.LANCZOS).tobytes()
- texture=VTF(1024,512,version=(7,2),fmt=ImageFormats.DXT5,flags=source.flags)
+ texture=VTF(1024,512,version=(7,2),fmt=ImageFormats.DXT1 if filename=="suit_shirtx.vtf" else ImageFormats.DXT5,flags=source.flags)
  texture.get().copy_from(pixels)
  with p.open('wb') as f:texture.save(f)
 # One shared normal map avoids ambiguous duplicate names in PAC's flattened cache.
@@ -37,7 +37,7 @@ for name in names:
   files.add(texture)
 for source in mdl.parent.glob(mdl.stem+'.*'):
  dest=STAGE/'models/kvarkar'/source.name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,dest);files.add(dest)
-output=REPO/'assets/herr_kvarkar_department_r6.zip'
+output=REPO/'assets/herr_kvarkar_department_r6a.zip'
 with zipfile.ZipFile(output,'w',zipfile.ZIP_STORED) as z:
  for p in sorted(files):z.write(p,p.relative_to(STAGE).as_posix())
 with zipfile.ZipFile(output) as z:

@@ -17,3 +17,5 @@ This is a personal PAC assembly and adaptation. It does not claim ownership of u
 - Coat-tail procedural-bone setup was checked against [Valve's Source SDK jiggle-bone implementation](https://github.com/ValveSoftware/source-sdk-2013/blob/master/src/public/jigglebones.cpp).
 
 ISD scales-of-justice emblem: original image supplied through the user-linked [ISD roster](https://docs.google.com/spreadsheets/d/1uLWo99ymBUu331g9Cp41uwtpEi11X3tVsuxYWMBZ3gE/edit?gid=704543577), used unchanged as the alpha silhouette of the conforming back relief. No roster data is included.
+
+ISD scales-of-justice emblem: original image from the user-supplied [ISD roster](https://docs.google.com/spreadsheets/d/1uLWo99ymBUu331g9Cp41uwtpEi11X3tVsuxYWMBZ3gE/edit?gid=704543577), used unchanged as the alpha silhouette of the conforming back relief. No roster data is included.

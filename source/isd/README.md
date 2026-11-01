@@ -15,3 +15,9 @@ The DEA PAC and its hosted runtime files are unchanged. ISD was approved and wor
 The draft model source now has a **Department colours** skin family and independent **Department armour** and **Tie** bodygroups. The base costume contains no tie triangles. The separate Tie bodygroup has off, full-length and tucked variants. ISD defaults are blue, armour on and tucked tie; DEA defaults are red, armour off and full-length tie. `pac_department_defaults.json` records the settings for each eventual PAC save. These defaults are wired into the saved ISD preview and shared base. The published DEA runtime is unchanged.
 
 The saved preview has separately named eyewear, earpiece and laser equipment parts. Toggle their Hide setting in PAC3. The model colour/armour/tie controls are exposed on the main character part. The ISD preset is approved; organised PAC saves are under `pacs/herr_kvarkar/`.
+
+## r6 movement and insignia update
+
+Upper shoulder straps and the vest back panel now follow the coat surface's skin weights with inward clearance, addressing shoulder/back protrusions during running. Separate native standing and running renders were checked with an invalidated bone cache. No game camera override is used for this verification.
+
+The exact scales-of-justice ISD emblem from the supplied sheet is a shallow conforming upper-back relief. The optional **Department insignia** bodygroup is 0 off, 1 ISD scales, 2 DEA handshake. Its surface and weights are copied from the coat so it bends with the same panel. The shared base defaults to no emblem.
