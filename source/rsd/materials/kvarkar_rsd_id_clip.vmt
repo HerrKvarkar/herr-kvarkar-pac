@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+ "$model" "1"
+ "$basetexture" "models/kvarkar/rsd/badge_scientist_shirt_row_c"
+ "$bumpmap" "models/kvarkar/rsd/badge_scientist_shirt_row_n"
+ "$phongexponenttexture" "models/kvarkar/rsd/badge_scientist_shirt_row_s"
+ "$phong" "1"
+ "$phongboost" "0.3"
+}

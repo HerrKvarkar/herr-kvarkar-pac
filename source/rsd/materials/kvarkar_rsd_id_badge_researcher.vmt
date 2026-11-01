@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+ "$model" "1"
+ "$basetexture" "models/kvarkar/rsd/badge_badge_researcher"
+ "$phong" "1"
+ "$phongboost" "0.25"
+ "$phongexponent" "32"
+}

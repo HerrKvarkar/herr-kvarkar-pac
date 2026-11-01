@@ -74,7 +74,9 @@
       "bodygroups": {
         "Tie": 1,
         "Department insignia": 1,
-        "Pager": 1
+        "Pager": 1,
+        "ID badge": 1,
+        "Lanyard": 0
       },
       "emblem": "assets/rsd_logo_reference.png",
       "accessories": {
@@ -82,7 +84,9 @@
         "earpiece": false,
         "ammo_pouches": false,
         "department_identification": "RSD",
-        "pager": true
+        "pager": true,
+        "id_badge": "native Researcher card and clip",
+        "lanyard": false
       },
       "tie_material": "kvarkar_rsd_charcoal_tie.vmt"
     }

@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+ "$model" "1"
+ "$basetexture" "models/kvarkar/rsd/badge_lanyard"
+ "$nocull" "1"
+}

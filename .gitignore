@@ -113,3 +113,6 @@
 !/source/rsd/materials/*.vtf
 
 !/assets/herr_kvarkar_rsd_preview_r7.zip
+
+!/source/rsd/badge_native.json
+!/assets/herr_kvarkar_rsd_preview_r11.zip

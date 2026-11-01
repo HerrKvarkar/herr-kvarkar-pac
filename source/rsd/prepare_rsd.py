@@ -59,6 +59,64 @@ for i in range(0,len(raw),3):
   vertices.append({'p':pos,'n':np.array(item['normal']),'uv':np.array(item['uv']),'weights':{names['ValveBiped.Bip01_Pelvis']:1.}})
  pager.append(('kvarkar_rsd_pager_'+raw[i]['material'].split('/')[-1]+'.vmt',vertices))
 write_smd(OUT/'kvarkar_rsd_pager.smd',header,pager)
+# The donor's Researcher ID clips onto the left chest; its lanyard is separate.
+# Fit the card to the outer coat rather than leave it inside the donor's shirt.
+badge=[];lanyard=[]
+coat=[tri for mat,tri in costume if mat=='kvarkar_leather_coat_fine.vmt']
+coat_points=np.array([[v['p'] for v in tri] for tri in coat])
+aa=coat_points[:,0];bb=coat_points[:,1];cc=coat_points[:,2]
+ab=bb[:,[0,2]]-aa[:,[0,2]];ac=cc[:,[0,2]]-aa[:,[0,2]]
+det=ab[:,0]*ac[:,1]-ab[:,1]*ac[:,0];safe=np.where(abs(det)>1e-9,det,1.)
+def coat_front_y(x,z):
+ q=np.array([x,z])-aa[:,[0,2]]
+ u=(q[:,0]*ac[:,1]-q[:,1]*ac[:,0])/safe;w=(ab[:,0]*q[:,1]-ab[:,1]*q[:,0])/safe
+ valid=(abs(det)>1e-9)&(u>=-.001)&(w>=-.001)&(u+w<=1.001)
+ ids=np.flatnonzero(valid)
+ if not len(ids):return None
+ ys=(1.-u-w)*aa[:,1]+u*bb[:,1]+w*cc[:,1]
+ index=min(ids,key=lambda i:ys[i]);bary=[1.-u[index]-w[index],u[index],w[index]]
+ weights={};normal=np.zeros(3)
+ for v,factor in zip(coat[index],bary):
+  normal+=v['n']*factor
+  for bone,weight in v['weights'].items():weights[bone]=weights.get(bone,0.)+weight*max(0.,factor)
+ normal/=max(np.linalg.norm(normal),1e-9)
+ return ys[index],weights,normal
+raw=json.loads((OUT/'badge_native.json').read_text(encoding='utf-8'))
+for i in range(0,len(raw),3):
+ kind=raw[i]['material'].split('/')[-1];vertices=[]
+ for item in raw[i:i+3]:
+  pos=np.array(item['pos'],dtype=float)
+  weights={names[link['name']]:link['weight'] for link in item['weights']};normal=np.array(item['normal'])
+  if kind!='lanyard':
+   pos[0]+=1.6
+   front=coat_front_y(pos[0],pos[2])
+   if front is not None:
+    pos[1]=front[0]-(.22 if kind=='clip' else .18)
+    weights=front[1];normal=front[2]
+  else:
+   # Retain the native neck loop; gently clear the broader shared shirt front.
+   pos[1]-=.35*min(1.,max(0.,(-pos[1]-1.)/2.))
+  vertices.append({'p':pos,'n':normal,'uv':np.array(item['uv']),'weights':weights})
+ (lanyard if kind=='lanyard' else badge).append(('kvarkar_rsd_id_'+kind+'.vmt',vertices))
+# Subdivide the card before conforming it, so a large triangle cannot cut
+# through the convex breast panel between its fitted corner vertices.
+fitted_badge=[]
+def fit_card(material,tri,depth=0):
+ ps=np.array([v['p'] for v in tri])
+ if material.endswith('badge_researcher.vmt') and max(np.ptp(ps[:,0]),np.ptp(ps[:,2]))>.3 and depth<6:
+  for child in scope['split_triangle'](tri):fit_card(material,child,depth+1)
+  return
+ for v in tri:
+  hit=coat_front_y(v['p'][0],v['p'][2])
+  if hit is not None:
+   v['p'][1]=hit[0]-(.22 if material.endswith('clip.vmt') else .18)
+   v['weights']=hit[1];v['n']=hit[2]
+ fitted_badge.append((material,tri))
+for material,tri in badge:fit_card(material,tri)
+badge=fitted_badge
+write_smd(OUT/'kvarkar_rsd_id_badge.smd',header,badge)
+write_smd(OUT/'kvarkar_rsd_lanyard.smd',header,lanyard)
+
 costume=[(PROFILE['shirt_material'] if mat=='kvarkar_dea_shirt.vmt' else mat,tri) for mat,tri in costume if mat!='kvarkar_black_tie.vmt']
 panel=[];remaining=[]
 rect=[(0,-4.5,1),(0,4.5,-1),(2,50,1),(2,59,-1)]
@@ -112,10 +170,12 @@ costume=[(PROFILE['coat_material'] if mat=='kvarkar_leather_coat_fine.vmt' else 
 write_smd(OUT/'kvarkar_rsd_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
 qc=(REPO/'source/v2/kvarkar_animated.qc').read_text(encoding='utf-8')
-qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r7.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
+qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_rsd_preview_r11.mdl').replace('"kvarkar_costume.smd"','"kvarkar_rsd_costume.smd"')
 qc=qc.replace('$cdmaterials "models/kvarkar/v2/"','$cdmaterials "models/kvarkar/rsd/"\n$cdmaterials "models/kvarkar/v2/"')
 qc+='\n$bodygroup "Tie" {\n blank\n studio "kvarkar_optional_tie.smd"\n}\n'
 qc+='\n$bodygroup "Department insignia" {\n studio "kvarkar_plain_back_panel.smd"\n studio "kvarkar_rsd_emblem.smd"\n}\n'
 qc+='\n$bodygroup "Pager" {\n blank\n studio "kvarkar_rsd_pager.smd"\n}\n'
+qc+='\n$bodygroup "ID badge" {\n blank\n studio "kvarkar_rsd_id_badge.smd"\n}\n'
+qc+='\n$bodygroup "Lanyard" {\n blank\n studio "kvarkar_rsd_lanyard.smd"\n}\n'
 (OUT/'kvarkar_rsd.qc').write_text('\n'.join(line.rstrip() for line in qc.splitlines())+'\n',encoding='utf-8')
 print(json.dumps({'costumeTriangles':len(costume),'emblemTriangles':len(emblem),'armour':False,'state':'not worn'}))
