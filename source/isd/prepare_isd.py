@@ -122,39 +122,68 @@ for _,tri in vest:
   vertex['weights']={bone:weight/total for bone,weight in weights.items()}
   matched_straps+=1
 write_smd(OUT/'kvarkar_isd_armour.smd',header,vest)
-# Department insignia is a conforming shallow relief, independently selectable.
-# Copy the coat surface and skin weights so it follows the same animated panel.
-emblem=[]
-def emblem_triangle(tri):
- span=max(np.linalg.norm(tri[i]['p']-tri[(i+1)%3]['p']) for i in range(3))
- if span>1:
-  for child in scope['split_triangle'](tri):emblem_triangle(child)
-  return
- vertices=[]
- for v in tri:
-  x,y,z=v['p'];n=v['n']/max(np.linalg.norm(v['n']),1e-10)
-  vertices.append({**v,'p':v['p']+n*.045,'uv':np.array([(4.5-x)/9,(z-50)/9])})
- emblem.append(('kvarkar_isd_back_emblem.vmt',vertices))
+# Replace the back panel with selectable same-leather relief variants.
+# Preserve its original coat UVs and weights; no black decal or alpha overlay.
+panel=[];remaining=[]
+rect=[(0,-4.5,1),(0,4.5,-1),(2,50,1),(2,59,-1)]
 for material,tri in costume:
- if material!='kvarkar_leather_coat_fine.vmt' or min(v['p'][1] for v in tri)<1:continue
- if np.mean([v['n'][1] for v in tri])<.2:continue
+ if material!='kvarkar_leather_coat_fine.vmt' or min(v['p'][1] for v in tri)<1 or np.mean([v['n'][1] for v in tri])<.2:
+  remaining.append((material,tri));continue
  poly=tri
- for axis,bound,direction in [(0,-4.5,1),(0,4.5,-1),(2,50,1),(2,59,-1)]:poly=scope['clip'](poly,axis,bound,direction)
- for clipped in scope['triangulate'](poly):emblem_triangle(clipped)
-assert emblem
+ for axis,bound,direction in rect:
+  outside=scope['clip'](poly,axis,bound,-direction)
+  remaining.extend((material,t) for t in scope['triangulate'](outside))
+  poly=scope['clip'](poly,axis,bound,direction)
+  if not poly:break
+ panel.extend(scope['triangulate'](poly))
+assert panel
+costume=remaining
+write_smd(OUT/'kvarkar_plain_back_panel.smd',header,[(PROFILE['coat_material'],tri) for tri in panel])
+
+def emboss_panel(master,material):
+ alpha=np.asarray(Image.open(REPO/'assets'/master).getchannel('A'),dtype=float)/255
+ result=[]
+ def sample(p):
+  u=(4.5-p[0])/9;v=(59-p[2])/9
+  if not(0<=u<=1 and 0<=v<=1):return 0.
+  x=u*(alpha.shape[1]-1);y=v*(alpha.shape[0]-1);ix=int(x);iy=int(y);fx=x-ix;fy=y-iy
+  jx=min(ix+1,alpha.shape[1]-1);jy=min(iy+1,alpha.shape[0]-1)
+  return alpha[iy,ix]*(1-fx)*(1-fy)+alpha[iy,jx]*fx*(1-fy)+alpha[jy,ix]*(1-fx)*fy+alpha[jy,jx]*fx*fy
+ def stamp(tri,depth=0):
+  ps=np.array([v['p'] for v in tri]);lo=ps.min(0);hi=ps.max(0)
+  x0=max(0,int((4.5-hi[0])/9*(alpha.shape[1]-1)));x1=min(alpha.shape[1]-1,int((4.5-lo[0])/9*(alpha.shape[1]-1))+1)
+  y0=max(0,int((59-hi[2])/9*(alpha.shape[0]-1)));y1=min(alpha.shape[0]-1,int((59-lo[2])/9*(alpha.shape[0]-1))+1)
+  region=alpha[y0:y1+1,x0:x1+1]
+  mixed=region.size and region.max()>.01 and region.min()<.999
+  if mixed and max(hi[0]-lo[0],hi[2]-lo[2])>.17 and depth<10:
+   for child in scope['split_triangle'](tri):stamp(child,depth+1)
+   return
+  out=[]
+  for vertex in tri:
+   p=vertex['p'];h=.03;level=sample(p)
+   dx=(sample(p+np.array([h,0,0]))-sample(p-np.array([h,0,0])))/(2*h)
+   dz=(sample(p+np.array([0,0,h]))-sample(p-np.array([0,0,h])))/(2*h)
+   n=vertex['n'].copy();n[0]-=.025*dx*n[1];n[2]-=.025*dz*n[1];n/=max(np.linalg.norm(n),1e-9)
+   out.append({**vertex,'p':p+np.array([0,.025*level,0]),'n':n})
+  mat=material if sample(ps.mean(0))>.35 else PROFILE['coat_material']
+  result.append((mat,out))
+ for tri in panel:stamp(tri)
+ return result
+emblem=emboss_panel('isd_logo_reference.png','kvarkar_isd_leather_emboss.vmt')
+dea_emblem=emboss_panel('dea_logo_reference.png','kvarkar_dea_leather_emboss.vmt')
 write_smd(OUT/'kvarkar_isd_back_emblem.smd',header,emblem)
-write_smd(OUT/'kvarkar_dea_back_emblem.smd',header,[('kvarkar_dea_back_emblem.vmt',tri) for _,tri in emblem])
+write_smd(OUT/'kvarkar_dea_back_emblem.smd',header,dea_emblem)
 
 costume=[(PROFILE['coat_material'] if mat=='kvarkar_leather_coat_fine.vmt' else mat,tri) for mat,tri in costume]
 write_smd(OUT/'kvarkar_isd_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
-qc=(REPO/'source/v2/kvarkar_animated.qc').read_text();qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_isd_draft_r6.mdl').replace('"kvarkar_costume.smd"','"kvarkar_isd_costume.smd"')
+qc=(REPO/'source/v2/kvarkar_animated.qc').read_text();qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_isd_draft_r7.mdl').replace('"kvarkar_costume.smd"','"kvarkar_isd_costume.smd"')
 # An independent armour bodygroup keeps the shared character usable without armour.
 qc=qc.replace('$cdmaterials \"models/kvarkar/v2/\"','$cdmaterials \"models/kvarkar/isd/\"\n$cdmaterials \"models/kvarkar/v2/\"')
 qc+='\n$bodygroup "Department armour" {\n blank\n studio "kvarkar_isd_armour.smd"\n}\n'
 qc+='\n$bodygroup "Tie" {\n blank\n studio "kvarkar_optional_tie.smd"\n studio "kvarkar_tie_tucked.smd"\n}\n'
 qc+='\n$texturegroup "Department colours" {\n { "kvarkar_isd_blue_shirt" "kvarkar_isd_leather_coat" }\n { "kvarkar_dea_shirt" "kvarkar_leather_coat_fine" }\n}\n'
-qc+='\n$bodygroup "Department insignia" {\n blank\n studio "kvarkar_isd_back_emblem.smd"\n studio "kvarkar_dea_back_emblem.smd"\n}\n'
+qc+='\n$bodygroup "Department insignia" {\n studio "kvarkar_plain_back_panel.smd"\n studio "kvarkar_isd_back_emblem.smd"\n studio "kvarkar_dea_back_emblem.smd"\n}\n'
 (OUT/'kvarkar_isd.qc').write_text(qc)
 (OUT/'pac_department_defaults.json').write_text(json.dumps({name:{'name':p['display_name'],'skin':p['skin'],'bodygroups':p['bodygroups'],'accessories':p['accessories']} for name,p in PROFILES['profiles'].items()},indent=2))
 from srctools.vtf import VTF,ImageFormats,VTFFlags

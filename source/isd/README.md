@@ -21,3 +21,7 @@ The saved preview has separately named eyewear, earpiece and laser equipment par
 Upper shoulder straps and the vest back panel now follow the coat surface's skin weights with inward clearance, addressing shoulder/back protrusions during running. Separate native standing and running renders were checked with an invalidated bone cache. No game camera override is used for this verification.
 
 The exact scales-of-justice ISD emblem from the supplied sheet is a shallow conforming upper-back relief. The optional **Department insignia** bodygroup is 0 off, 1 ISD scales, 2 DEA handshake. Its surface and weights are copied from the coat so it bends with the same panel. The shared base defaults to no emblem.
+
+## r7 subtle leather emboss
+
+The black alpha mark has been replaced with a true selectable coat panel. All variants keep the original leather UVs, normal map, shading and skin weights. The ISD and DEA glyphs are raised only 0.025 Source units, with alpha-derived edge normals and a modest 0.82 material tint. No logo bitmap is used as the colour texture. Insignia 0 supplies the intact plain panel; 1 supplies the ISD embossed panel; 2 supplies the DEA embossed panel. Standing and angled native renders were checked without modifying the player's camera.
