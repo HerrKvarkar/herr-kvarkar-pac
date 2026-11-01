@@ -1,3 +1,11 @@
+# ISD and shared department base — local review
+
+The ISD preview is **not approved for wearing yet**. Load `herr_kvarkar_isd_preview.txt` in PAC3 for local review. `herr_kvarkar_department_base.txt` uses the same compiled character with armour and tie switched off, ready to adapt to another department. The approved DEA V2 saves remain unchanged.
+
+Select **Character | Department colours and armour** in PAC3. Skin 0 selects ISD blue; Skin 1 selects DEA red. **Department armour** is 0 off or 1 on. **Tie** is 0 off, 1 full length, or 2 tucked beneath armour. The current ISD save uses skin 0, armour 1 and tie 2. Eyewear, fitted earpiece and laser equipment have named parts that can be hidden independently. The editable profile definitions are in `department_profiles.json`.
+
+The hosted r4 preview pack is 14,631,681 bytes, below the verified 15 MiB PAC limit. Native client checks confirmed all 16 materials loaded, 61 facial controls, visible armour, revised collar/strap clearance and a 64-unit view offset. The shoulder straps and tucked tie were fitted in the running game; further pose-specific feedback can be addressed before approval. The DEA back emboss has been removed from this shared coat geometry.
+
 # Herr Kvarkar â€” V2
 
 V2 was approved and worn on 31 October 2026. Load `herr_kvarkar_ea_field_agent.txt` or the versioned `herr_kvarkar_ea_field_agent_v2.txt`. The V1 save remains available for rollback.
