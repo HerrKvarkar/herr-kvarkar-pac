@@ -66,3 +66,6 @@
 !/source/isd/materials/
 !/source/isd/materials/*.vmt
 !/source/isd/materials/*.vtf
+
+!/department_profiles.json
+!/assets/kvarkar_leather_coat_isd_blue_accents.png

@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+ "$basetexture" "models/kvarkar/isd/coat_isd_blue_accents"
+ "$bumpmap" "models/kvarkar/v2/jbib_normal_013"
+ "$model" "1"
+ "$nocull" "1"
+ "$halflambert" "1"
+ "$phong" "1"
+ "$phongboost" "0.22"
+ "$phongexponent" "18"
+ "$phongtint" "[0.7 0.7 0.7]"
+ "$phongfresnelranges" "[0.05 0.12 0.28]"
+ "$envmap" "env_cubemap"
+ "$envmaptint" "[0.015 0.015 0.015]"
+}

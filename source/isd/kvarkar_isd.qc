@@ -247,7 +247,17 @@ $jigglebone "Kvarkar.CoatTail.R" {
  }
 }
 
-$bodygroup "ISD armour" {
+$bodygroup "Department armour" {
  blank
  studio "kvarkar_isd_armour.smd"
+}
+
+$bodygroup "Tie" {
+ blank
+ studio "kvarkar_optional_tie.smd"
+}
+
+$texturegroup "Department colours" {
+ { "kvarkar_isd_blue_shirt" "kvarkar_isd_leather_coat" }
+ { "kvarkar_dea_shirt" "kvarkar_leather_coat_fine" }
 }

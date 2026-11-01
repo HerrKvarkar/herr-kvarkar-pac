@@ -1,0 +1,30 @@
+{
+  "isd": {
+    "name": "Herr Kvarkar | ISD",
+    "skin": 0,
+    "bodygroups": {
+      "Department armour": 1,
+      "Tie": 0
+    },
+    "accessories": {
+      "sunglasses": true,
+      "earpiece": true,
+      "ammo_pouches": false,
+      "department_identification": "ISD"
+    }
+  },
+  "dea": {
+    "name": "Herr Kvarkar | DEA",
+    "skin": 1,
+    "bodygroups": {
+      "Department armour": 0,
+      "Tie": 1
+    },
+    "accessories": {
+      "sunglasses": true,
+      "earpiece": true,
+      "ammo_pouches": false,
+      "department_identification": "DEA"
+    }
+  }
+}
