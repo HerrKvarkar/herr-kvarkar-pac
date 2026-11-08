@@ -21,6 +21,28 @@
 							},
 							["self"] = {
 								["ClassName"] = "proxy",
+								["UniqueID"] = "378084318fe9de3c15c049ceec72e657ed974ba8cb88b779948a99900e435aa6",
+								["Expression"] = "clamp(voice_volume()*1.5,0,0.4)",
+								["Name"] = "Voice articulation",
+								["VariableName"] = "Weight",
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "flex",
+						["Weight"] = 1.2457664979593e-05,
+						["Flex"] = "right_part",
+						["Name"] = "Voice lip right_part",
+						["UniqueID"] = "ae222cf69df377b8e056fa7bb8bfbc73b62297eeac1fb2c807bc4aea98def204",
+					},
+				},
+				[2] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["ClassName"] = "proxy",
 								["UniqueID"] = "8cc838257f19155eae950b105c7a472910807c85bf73871057fffe1d282d4f01",
 								["Expression"] = "clamp(voice_volume()*1.5,0,0.4)",
 								["Name"] = "Voice articulation",
@@ -30,13 +52,13 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 0.00031044500065036,
+						["Weight"] = 1.2457664979593e-05,
 						["Flex"] = "left_part",
 						["Name"] = "Voice lip left_part",
 						["UniqueID"] = "9ee50d31d14e38211ec84730f7f5cea4f11f0c9c6715ecdfa7e792cba58f15f1",
 					},
 				},
-				[2] = {
+				[3] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -57,7 +79,7 @@
 						["Name"] = "Natural blink",
 					},
 				},
-				[3] = {
+				[4] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -73,32 +95,10 @@
 					},
 					["self"] = {
 						["ClassName"] = "flex",
-						["Weight"] = 0.00062089000130072,
+						["Weight"] = 2.4915329959185e-05,
 						["Flex"] = "jaw_drop",
 						["Name"] = "Voice jaw movement",
 						["UniqueID"] = "58dc591524458d9f7ddd6c574ea8640d9bbf87999cf5fce3d81ecbccea5893eb",
-					},
-				},
-				[4] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-							},
-							["self"] = {
-								["ClassName"] = "proxy",
-								["UniqueID"] = "378084318fe9de3c15c049ceec72e657ed974ba8cb88b779948a99900e435aa6",
-								["Expression"] = "clamp(voice_volume()*1.5,0,0.4)",
-								["Name"] = "Voice articulation",
-								["VariableName"] = "Weight",
-							},
-						},
-					},
-					["self"] = {
-						["ClassName"] = "flex",
-						["Weight"] = 0.00031044500065036,
-						["Flex"] = "right_part",
-						["Name"] = "Voice lip right_part",
-						["UniqueID"] = "ae222cf69df377b8e056fa7bb8bfbc73b62297eeac1fb2c807bc4aea98def204",
 					},
 				},
 			},
@@ -106,10 +106,10 @@
 				["BoneMerge"] = true,
 				["UniqueID"] = "e753b006983d5eee3c3d16944efb711b56842e6b0ffa2b17dae99d6104705019",
 				["Notes"] = "Combat Medic: blue gloves; medical armour; loose coat. Headgear: 0 normal hair, 1 helmet with tucked hair, 2 helmet and headset with tucked hair. Department armour and Department insignia: 0 off/1 on. Medical kit is off by default. No running animation override.",
-				["Materials"] = "pac3_cache/3226295671/kvarkar_face;pac3_cache/3226295671/kvarkar_mouth;pac3_cache/3226295671/kvarkar_eye_l;pac3_cache/3226295671/kvarkar_eye_r;pac3_cache/3226295671/kvarkar_dea_trousers;pac3_cache/3226295671/kvarkar_cm_shirt;pac3_cache/3226295671/kvarkar_field_boots;pac3_cache/3226295671/kvarkar_field_trousers_clean;pac3_cache/3226295671/kvarkar_field_pocket;pac3_cache/3226295671/kvarkar_leather_coat_fine;pac3_cache/3226295671/kvarkar_cm_blue_gloves;pac3_cache/3226295671/kvarkar_cm_vest;pac3_cache/3226295671/kvarkar_cm_fieldkit;pac3_cache/3226295671/kvarkar_hair;pac3_cache/3226295671/kvarkar_cm_helmet_shell;pac3_cache/3226295671/kvarkar_cm_helmet_rails;pac3_cache/3226295671/kvarkar_cm_helmet_mounts;pac3_cache/3226295671/kvarkar_cm_headset;pac3_cache/3226295671/kvarkar_cm_leather_emboss",
+				["Materials"] = "pac3_cache/1652347741/kvarkar_face;pac3_cache/1652347741/kvarkar_mouth;pac3_cache/1652347741/kvarkar_eye_l;pac3_cache/1652347741/kvarkar_eye_r;pac3_cache/1652347741/kvarkar_dea_trousers;pac3_cache/1652347741/kvarkar_cm_shirt;pac3_cache/1652347741/kvarkar_field_boots;pac3_cache/1652347741/kvarkar_field_trousers_clean;pac3_cache/1652347741/kvarkar_field_pocket;pac3_cache/1652347741/kvarkar_leather_coat_fine;pac3_cache/1652347741/kvarkar_cm_blue_gloves;pac3_cache/1652347741/kvarkar_cm_vest;pac3_cache/1652347741/kvarkar_cm_fieldkit;pac3_cache/1652347741/kvarkar_hair;pac3_cache/1652347741/kvarkar_cm_helmet_shell;pac3_cache/1652347741/kvarkar_cm_helmet_rails;pac3_cache/1652347741/kvarkar_cm_helmet_mounts;pac3_cache/1652347741/kvarkar_cm_headset;pac3_cache/1652347741/kvarkar_cm_leather_emboss",
 				["Name"] = "Character | Combat Medic",
 				["ClassName"] = "model2",
-				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_combat_medic_r6.zip",
+				["Model"] = "https://raw.githubusercontent.com/HerrKvarkar/herr-kvarkar-pac/main/assets/herr_kvarkar_combat_medic_r8.zip",
 				["ModelModifiers"] = "Department armour=1;Medical kit=0;Headgear=2;Department insignia=1;skin=0;",
 				["EyeTargetUID"] = "ecf94ff844467717babb1d4003dc7beb079d18536c6147ef89b9ce38cdedcf0d",
 			},
@@ -145,28 +145,31 @@
 					["children"] = {
 						[1] = {
 							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Angles"] = Angle(0, -28.799999237061, 0),
+										["ClassName"] = "bone3",
+										["UniqueID"] = "481c5c21efc0095fd1bd3d8ac49a815e12fd0f9a8da1cb33ffdc46b8460bf313",
+										["Bone"] = "right finger 42",
+									},
+								},
 							},
 							["self"] = {
-								["UniqueID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
-								["AimPartUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
-								["Name"] = "Shoulder Target",
 								["EditorExpand"] = true,
-								["Size"] = 0,
-								["AngleOffset"] = Angle(70.900001525879, -5, -100),
-								["Position"] = Vector(-10.942000389099, 17.469329833984, -2.5390625),
-								["Bone"] = "pelvis",
-								["Model"] = "models/pac/default.mdl",
-								["ClassName"] = "model2",
+								["UniqueID"] = "2acf3a1db7d9072e33ce56010933052576044cfeda04b2afa541c04603d1e45a",
+								["Bone"] = "right finger 41",
+								["Angles"] = Angle(0, -69.199996948242, 0),
+								["ClassName"] = "bone3",
 							},
 						},
 					},
 					["self"] = {
+						["Angles"] = Angle(-23.39999961853, -54.700000762939, 0),
 						["ClassName"] = "bone3",
-						["UniqueID"] = "a857f02dd9a199a619306d1ee0f29c96ef259b5a73e1a6a65b083ff6e3192972",
-						["FollowPartUID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
-						["Bone"] = "right upperarm",
-						["Name"] = "Shoulder",
-						["Angles"] = Angle(15, -69, 0),
+						["UniqueID"] = "8940e0cd15c66df9ac9d575da588d1dd61f3da9af694e43556f7157b948b1cbf",
+						["Bone"] = "right finger 4",
 					},
 				},
 				[2] = {
@@ -201,6 +204,78 @@
 					},
 				},
 				[3] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+							},
+							["self"] = {
+								["UniqueID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
+								["AimPartUID"] = "78b0eb6038ed2453d8909d061c2b8e9330c37a380d5ecc2a9390ea13b162b4ef",
+								["Name"] = "Shoulder Target",
+								["EditorExpand"] = true,
+								["Size"] = 0,
+								["AngleOffset"] = Angle(70.900001525879, -5, -100),
+								["Position"] = Vector(-10.942000389099, 17.469329833984, -2.5390625),
+								["Bone"] = "pelvis",
+								["Model"] = "models/pac/default.mdl",
+								["ClassName"] = "model2",
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "a857f02dd9a199a619306d1ee0f29c96ef259b5a73e1a6a65b083ff6e3192972",
+						["FollowPartUID"] = "3c13e74cf98ac67d89a35ecf8a5e5c54ff47079489deae3c6aa19f16b7c3dad0",
+						["Bone"] = "right upperarm",
+						["Name"] = "Shoulder",
+						["Angles"] = Angle(15, -69, 0),
+					},
+				},
+				[4] = {
+					["children"] = {
+					},
+					["self"] = {
+						["ClassName"] = "bone3",
+						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
+						["Angles"] = Angle(0, -69.300003051758, 0),
+						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
+						["Bone"] = "right forearm",
+						["Name"] = "Elbow",
+						["EditorExpand"] = true,
+					},
+				},
+				[5] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Angles"] = Angle(0, -35.799999237061, 0),
+										["ClassName"] = "bone3",
+										["UniqueID"] = "05be6dfa480d8b5d969a71a35a6c5a5029b21e8363f97d49f2823cf0d8159928",
+										["Bone"] = "right finger 22",
+									},
+								},
+							},
+							["self"] = {
+								["EditorExpand"] = true,
+								["UniqueID"] = "2326e266a5867bdd688454a838d745bf687198bf3d1a0dafd65e5844e4629b00",
+								["Bone"] = "right finger 21",
+								["Angles"] = Angle(0, -75.199996948242, 0),
+								["ClassName"] = "bone3",
+							},
+						},
+					},
+					["self"] = {
+						["Angles"] = Angle(0, -46.900001525879, 0),
+						["ClassName"] = "bone3",
+						["UniqueID"] = "f8f6100202d7e1852b247ff966e72930c2ab085187d36cd5871237f80f69b8d6",
+						["Bone"] = "right finger 2",
+					},
+				},
+				[6] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -244,7 +319,7 @@
 						["Position"] = Vector(4.0999999046326, -0.69999998807907, -1.5),
 					},
 				},
-				[4] = {
+				[7] = {
 					["children"] = {
 					},
 					["self"] = {
@@ -259,20 +334,7 @@
 						["Material"] = "red",
 					},
 				},
-				[5] = {
-					["children"] = {
-					},
-					["self"] = {
-						["ClassName"] = "bone3",
-						["UniqueID"] = "87ff7f25a8a87e7d9bc982ef47d06a3fb6b2124a42b82ee101e7732dbd3100aa",
-						["Angles"] = Angle(0, -69.300003051758, 0),
-						["FollowPartUID"] = "bc581dfc8e623f15c01344074eb3901a69496b6a92696551be45a6b62b651db0",
-						["Bone"] = "right forearm",
-						["Name"] = "Elbow",
-						["EditorExpand"] = true,
-					},
-				},
-				[6] = {
+				[8] = {
 					["children"] = {
 						[1] = {
 							["children"] = {
@@ -300,68 +362,6 @@
 						["ClassName"] = "bone3",
 						["UniqueID"] = "12564f7b86cd185736943dbbb4479e41061ed6473be76d88487c8685897ae790",
 						["Bone"] = "right finger 1",
-					},
-				},
-				[7] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-								[1] = {
-									["children"] = {
-									},
-									["self"] = {
-										["Angles"] = Angle(0, -35.799999237061, 0),
-										["ClassName"] = "bone3",
-										["UniqueID"] = "05be6dfa480d8b5d969a71a35a6c5a5029b21e8363f97d49f2823cf0d8159928",
-										["Bone"] = "right finger 22",
-									},
-								},
-							},
-							["self"] = {
-								["EditorExpand"] = true,
-								["UniqueID"] = "2326e266a5867bdd688454a838d745bf687198bf3d1a0dafd65e5844e4629b00",
-								["Bone"] = "right finger 21",
-								["Angles"] = Angle(0, -75.199996948242, 0),
-								["ClassName"] = "bone3",
-							},
-						},
-					},
-					["self"] = {
-						["Angles"] = Angle(0, -46.900001525879, 0),
-						["ClassName"] = "bone3",
-						["UniqueID"] = "f8f6100202d7e1852b247ff966e72930c2ab085187d36cd5871237f80f69b8d6",
-						["Bone"] = "right finger 2",
-					},
-				},
-				[8] = {
-					["children"] = {
-						[1] = {
-							["children"] = {
-								[1] = {
-									["children"] = {
-									},
-									["self"] = {
-										["Angles"] = Angle(0, -28.799999237061, 0),
-										["ClassName"] = "bone3",
-										["UniqueID"] = "481c5c21efc0095fd1bd3d8ac49a815e12fd0f9a8da1cb33ffdc46b8460bf313",
-										["Bone"] = "right finger 42",
-									},
-								},
-							},
-							["self"] = {
-								["EditorExpand"] = true,
-								["UniqueID"] = "2acf3a1db7d9072e33ce56010933052576044cfeda04b2afa541c04603d1e45a",
-								["Bone"] = "right finger 41",
-								["Angles"] = Angle(0, -69.199996948242, 0),
-								["ClassName"] = "bone3",
-							},
-						},
-					},
-					["self"] = {
-						["Angles"] = Angle(-23.39999961853, -54.700000762939, 0),
-						["ClassName"] = "bone3",
-						["UniqueID"] = "8940e0cd15c66df9ac9d575da588d1dd61f3da9af694e43556f7157b948b1cbf",
-						["Bone"] = "right finger 4",
 					},
 				},
 			},
