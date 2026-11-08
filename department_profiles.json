@@ -95,7 +95,7 @@
       "display_name": "Herr Kvarkar | Combat Medic",
       "status": "approved",
       "save_file": "pacs/herr_kvarkar/combat_medic.txt",
-      "model_asset": "assets/herr_kvarkar_combat_medic_r6.zip",
+      "model_asset": "assets/herr_kvarkar_combat_medic_r8.zip",
       "shirt_material": "kvarkar_cm_shirt.vmt",
       "coat_material": "kvarkar_leather_coat_fine.vmt",
       "coat_accent_master": "assets/kvarkar_leather_coat_v2_fine.png",
@@ -128,4 +128,5 @@
     }
   }
 }
+
 

@@ -31,7 +31,7 @@ with p.open('rb') as f:source=VTF.read(f);image=source.get().to_PIL().convert('R
 texture=VTF(512,512,version=(7,2),fmt=ImageFormats.DXT5,flags=source.flags)
 texture.get().copy_from(image.tobytes())
 with p.open('wb') as f:texture.save(f)
-mdl=GAME/'models/kvarkar/herr_kvarkar_combat_medic_r6.mdl';d=mdl.read_bytes()
+mdl=GAME/'models/kvarkar/herr_kvarkar_combat_medic_r8.mdl';d=mdl.read_bytes()
 def cs(o):return d[o:d.index(0,o)].decode()
 nt,ot=struct.unpack_from('<ii',d,204);names=[cs(ot+i*64+struct.unpack_from('<i',d,ot+i*64)[0]) for i in range(nt)]
 files=set()
@@ -45,7 +45,7 @@ for name in names:
   files.add(texture)
 for source in mdl.parent.glob(mdl.stem+'.*'):
  dest=STAGE/'models/kvarkar'/source.name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,dest);files.add(dest)
-output=REPO/'assets/herr_kvarkar_combat_medic_r6.zip'
+output=REPO/'assets/herr_kvarkar_combat_medic_r8.zip'
 with zipfile.ZipFile(output,'w',zipfile.ZIP_STORED) as z:
  for p in sorted(files):z.write(p,p.relative_to(STAGE).as_posix())
 with zipfile.ZipFile(output) as z:
@@ -58,4 +58,5 @@ print(output.name,output.stat().st_size,'bytes',nt,'materials')
 for p in CM.iterdir():
  target=GAME/'materials/models/kvarkar/combat_medic'/p.name
  target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,target)
+
 

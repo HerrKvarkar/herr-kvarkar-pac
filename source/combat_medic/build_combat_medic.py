@@ -160,6 +160,16 @@ for _,tri in helmet:
   v['p']=np.array([-.1+(x+.1)*sx,-.5+(y+.5)*sy,z+.55*f])
   v['n']=np.linalg.solve(jac.T,v['n']);v['n']/=max(np.linalg.norm(v['n']),1e-9)
   if f>0:contacts+=1
+# Give the occiput local clearance without widening the fitted shell or straps.
+# Use one smooth warp for shell, rails and mounts to preserve their joins.
+for _,tri in helmet:
+ for v in tri:
+  x,y,z=v['p'];t=min(1.,max(0.,y/2.5));rear=t*t*(3.-2.*t)
+  drear=6.*t*(1.-t)/2.5 if 0<t<1 else 0.
+  crown=np.exp(-((z-70.2)/2.8)**2);dcrown=crown*(-2.*(z-70.2)/(2.8**2))
+  jac=np.array([[1.,0.,0.],[0.,1.+.38*drear*crown,.38*rear*dcrown],[0.,0.,1.]])
+  v['p'][1]+=.38*rear*crown
+  v['n']=np.linalg.solve(jac.T,v['n']);v['n']/=max(np.linalg.norm(v['n']),1e-9)
 for _,tri in headset:
  for v in tri:
   x=v['p'][0];v['p'][0]-=np.sign(x)*.25*min(1.,abs(x)/2.)
@@ -229,7 +239,7 @@ write_smd(OUT/'kvarkar_cm_back_emblem.smd',header,emblem)
 write_smd(OUT/'kvarkar_cm_costume.smd',header,costume)
 for name in ['kvarkar_animated_head.smd','kvarkar_face.vta','kvarkar_merged_idle.smd']:shutil.copy2(REPO/'source/v2'/name,OUT/name)
 qc=(REPO/'source/v2/kvarkar_animated.qc').read_text(encoding='utf-8')
-qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_combat_medic_r6.mdl').replace('"kvarkar_costume.smd"','"kvarkar_cm_costume.smd"').replace('costume_and_hair','costume')
+qc=qc.replace('kvarkar/herr_kvarkar_v2_r7.mdl','kvarkar/herr_kvarkar_combat_medic_r8.mdl').replace('"kvarkar_costume.smd"','"kvarkar_cm_costume.smd"').replace('costume_and_hair','costume')
 qc=qc.replace('$cdmaterials "models/kvarkar/v2/"','$cdmaterials "models/kvarkar/combat_medic/"\n$cdmaterials "models/kvarkar/v2/"')
 qc+='\n$bodygroup "Department armour" {\n blank\n studio "kvarkar_cm_armour.smd"\n}\n'
 qc+='\n$bodygroup "Medical kit" {\n blank\n studio "kvarkar_cm_medical_kit.smd"\n}\n'
@@ -238,4 +248,6 @@ qc+='\n$bodygroup "Department insignia" {\n studio "kvarkar_plain_back_panel.smd
 (OUT/'kvarkar_combat_medic.qc').write_text('\n'.join(line.rstrip() for line in qc.splitlines())+'\n',encoding='utf-8')
 summary={'costumeTriangles':len(costume),'vestTriangles':len(vest),'kitTriangles':len(kit),'helmetTriangles':len(helmet),'headsetTriangles':len(headset),'blueGloveTriangles':len(gloves),'tuckedHairVertices':changed,'maxCrownTuck':max_change,'matchedArmourVertices':matched,'emblemTriangles':len(emblem),'customRunningOverride':False}
 (OUT/'build-status.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8');print(json.dumps(summary))
+
+
 
